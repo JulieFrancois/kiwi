@@ -20,6 +20,10 @@
   --sp_lg : 5rem;     /*  80px */
   --sp_xl : 10rem;    /* 160px */
   --sp_xxl: 15rem;    /* 240px */
+
+  /* Formats responsive*/
+  --desktop: 1200px;
+  --tablette: 700px;
 }
 
 *{
@@ -50,9 +54,7 @@ header{
 
 .logo{
   width: 15%;
-
 }
-
 
 /* HERO ************************************************************/
 
@@ -61,7 +63,7 @@ header{
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 0 var(--sp_xl);
+  padding: 0 15%;
   background: no-repeat url(/public/Group28.svg);
   background-position: 75% 105%;
 }
@@ -82,7 +84,7 @@ h1, p{
   width: var(--sp_xxl);
   font-size: var(--sp_sm);
   background-color: var(--lilac);
-  padding: var(--sp_sm) var(--sp_lg);
+  padding: 2% 5%;
   color: var(--light-green);
   text-decoration: none;
   border-radius: 5px;
@@ -110,5 +112,19 @@ footer > img{
   list-style: none;
 }
 
+/* RESPONSIVE****************************************************/
 
+@media screen and (max-width: 700px) {
+  
+  .logo{
+    width: 35%;
+  }
 
+  h1{
+    font-size: var(--fs_h2);
+  }
+
+  .cta{
+    padding: 5% 3%;
+  }
+}
