@@ -3,19 +3,20 @@ import React from 'react';
 function Header() {
   return (
     <header>
+        <img class="logo" src="/PersonaFy..svg"/>
         <nav>
-          <img class="logo" src="/logo.png"/>
-            <ul>
+          <img src="/Social Media/Group27.png"/>
+            {/* <ul>
                 <li><a href="" title="">pricing</a></li>
                 <li><a href="" title="">blog</a></li>
                 <li><a href="" title="">widgets</a></li>
                 <li><a href="" title="">feedback</a></li>
-            </ul>
+            </ul> */}
         </nav>
-        <div>
+        {/* <div>
             <a href="" title="">sign in</a>
             <a className="bouton" href="" title="">sign up for free</a>
-        </div>
+        </div> */}
     </header>
   );
 }
