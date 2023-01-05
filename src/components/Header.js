@@ -5,7 +5,7 @@ function Header() {
     <header>
         <img class="logo" src="/PersonaFy..svg"/>
         <nav>
-          <img src="/Social Media/Group27.png"/>
+          <img src="/socialmedia/Group27.png"/>
             {/* <ul>
                 <li><a href="" title="">pricing</a></li>
                 <li><a href="" title="">blog</a></li>

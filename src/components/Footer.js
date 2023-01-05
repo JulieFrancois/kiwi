@@ -5,11 +5,11 @@ function Footer () {
         <footer>
             <img src="/P..svg"/>
             <ul class="social">
-                <li><a href="" title=""><img src="/Social Media/Mail.png"/></a></li>
-                <li><a href="" title=""><img src="/Social Media/Facebook.png"/></a></li>
-                <li><a href="" title=""><img src="/Social Media/Linkedin.png"/></a></li>
-                <li><a href="" title=""><img src="/Social Media/Instagram.png"/></a></li>
-                <li><a href="" title=""><img src="/Social Media/Twitter.png"/></a></li>
+                <li><a href="" title=""><img src="/socialmedia/Mail.png"/></a></li>
+                <li><a href="" title=""><img src="/socialmedia/Facebook.png"/></a></li>
+                <li><a href="" title=""><img src="/socialmedia/Linkedin.png"/></a></li>
+                <li><a href="" title=""><img src="/socialmedia/Instagram.png"/></a></li>
+                <li><a href="" title=""><img src="/socialmedia/Twitter.png"/></a></li>
             </ul>
         </footer>
             );
