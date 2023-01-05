@@ -1,8 +1,8 @@
 import React from 'react';
 import logo from './logo.svg';
 import "./style.css"
-import Header from './components/Header';
-import Footer from './components/Footer';
+import Header from './Components/Header';
+import Footer from './Components/Footer';
 import Form from './pages/Formulaire';
 import Formulaire from './pages/Formulaire';
 import Test from './pages/Hero';
