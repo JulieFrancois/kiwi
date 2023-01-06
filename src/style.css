@@ -101,6 +101,13 @@ h1, p{
   text-decoration: none;
   border-radius: 5px;
   text-align: center;
+  border: solid var(--lilac);
+}
+
+.cta:hover{
+  background-color: transparent;
+  color: black;
+  transition: ease 0.5s;
 }
 
 /* FORMULAIRE ****************************************************/
