@@ -23,10 +23,12 @@ function App() {
         <Header></Header>
         <section className="hero">
           {ModifPage === "App" && <Test setModifPage={setModifPage}></Test>}
-          {ModifPage === "Form" && <Formulaire setModifPage={setModifPage} setformdata={setformdata}></Formulaire>}
           {/* {ModifPage === "Form2" && <Formulaire2 setModifPage={setModifPage} setformdata={setformdata}></Formulaire2>} */}
 
         </section>
+
+        {ModifPage === "Form" && <Formulaire setModifPage={setModifPage} setformdata={setformdata}></Formulaire>}
+
         <Footer></Footer>
       </>
   );

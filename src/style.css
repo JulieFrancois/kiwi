@@ -112,16 +112,13 @@ h1, p{
   gap: 400px;
 }
 
-.question{
+/* .question{
   height: 80vh;
-}
+} */
 
 .Titre{
   display: flex;
 }
-/* section{
-  height: 100vh;
-} */
 
 input, select {
 /* height: 3em; */
