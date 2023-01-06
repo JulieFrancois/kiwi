@@ -60,6 +60,7 @@ header{
   align-items: center;
   justify-content: space-between;
   padding: 0 var(--sp_sm);
+  
 }
 
 .logo{
@@ -105,8 +106,16 @@ h1, p{
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 400px;
 }
 
+.question{
+  height: 80vh;
+}
+
+.Titre{
+  display: flex;
+}
 /* section{
   height: 100vh;
 } */
@@ -133,7 +142,6 @@ background:rgba(0,0,0,0.0);
   display: flex;
   flex-direction: column;
 }
-
 
 
 .suivant{
@@ -165,6 +173,7 @@ footer {
   justify-content: space-between;
   height: 10vh;
   padding: 0 var(--sp_sm);
+  
 }
 
 footer > img{
