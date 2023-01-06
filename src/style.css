@@ -43,15 +43,6 @@ main{
 }
 
 
-/* FONT ***********************************************************/
-
-/* @font-face {
-	font-family: 'Raleway';
-	src: url(‘/public/Raleway/Raleway-Bold.ttf’) format(‘ttf’),
-		url(‘/public/Raleway/Raleway-Regular.ttf’) format(‘ttf’)
-
-} */
-
 /* HEADER ***********************************************************/
 
 header{
@@ -65,6 +56,10 @@ header{
 
 .logo{
   width: 15%;
+}
+
+nav > img{
+  width: 25px;
 }
 
 /* HERO ************************************************************/
