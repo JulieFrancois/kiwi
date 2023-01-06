@@ -115,7 +115,7 @@ footer > img{
   list-style: none;
 }
 
-/* RESPONSIVE****************************************************/
+/* RESPONSIVE*********************************************/
 
 @media screen and (max-width: var(--tablette)) {
   
