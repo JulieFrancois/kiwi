@@ -1,13 +1,15 @@
 import React from 'react';
 // import logo from './logo.svg';
 // import './App.css';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
 
-function Formulaire_fini() {
+function Formulaire_fini(setModifPage) {
   
     //JSX
     return (
         <>
-          <Header></Header>
+          {/* <Header></Header> */}
           <section className="Formulaire_fini">
           <h1>Félicitations !</h1>
             <p>Tu as terminé ton formulaire. 

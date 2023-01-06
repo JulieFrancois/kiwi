@@ -1,4 +1,5 @@
 import React from 'react';
+// import Footer from '../components/Footer';
 
 function Hero ({setModifPage}) {
     return (
@@ -8,6 +9,7 @@ function Hero ({setModifPage}) {
             <br></br>Réponds aux formulaire.
             <br></br>On se charge du reste</p>
             <a onClick={() => setModifPage("Form")} className="cta" href="#" title="">Répondre au formulaire</a>
+            {/* <Footer></Footer> */}
         </>
         );
     }
