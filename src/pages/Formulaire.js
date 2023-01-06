@@ -15,16 +15,18 @@ const [FormRef,handleSubmit,resetForm] = useForm((data)=>
     <>
     {/* <a onClick={() => setModifPage("Form")} className="cta" href="#" title="">Retour</a> */}
    
+    {/* {console.log(data)} */}
+  
    <h1>Qui es-tu ?</h1>
    
     <form ref={FormRef} onSubmit={handleSubmit}>
 
-        <label>
+        <label  className="age" >
           Quel âge as-tu ?
-          <input type="number" name="name" />
+          <input type="number" name="age"/>
         </label>
 
-        <label>
+        <label className="genre">
           Quel est ton genre ?
           <div>
           <input type="radio" id="huey" name="genre" value="Femme"/>
@@ -48,12 +50,12 @@ const [FormRef,handleSubmit,resetForm] = useForm((data)=>
     
          </label>
 
-        <label>
+        <label className="ville">
           Dans quelle ville habites-tu ?
-          <input type="text" name="name" />
+          <input type="text" name="ville" />
         </label>
 
-        <label>
+        <label className="activite">
           
          Quel est ton domaine d'activité ?
 
@@ -65,11 +67,8 @@ const [FormRef,handleSubmit,resetForm] = useForm((data)=>
         </select>
 
         </label>
-
      
-        <button>Suivant</button>
-
-
+        <button className="suivant">Suivant</button>
 
         </form>
     </>

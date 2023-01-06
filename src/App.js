@@ -1,12 +1,13 @@
 import React from 'react';
 import logo from './logo.svg';
 import "./style.css"
-import Header from './Components/Header';
-import Footer from './Components/Footer';
+import Header from './components/Header';
+import Footer from './components/Footer';
 import Form from './pages/Formulaire';
 import Formulaire from './pages/Formulaire';
 import Test from './pages/Hero';
 import Formulaire2 from './pages/Formulaire';
+import Formulaire_fini from './pages/Formulaire';
 
 function App() {
 
@@ -23,7 +24,7 @@ function App() {
         <section className="hero">
           {ModifPage === "App" && <Test setModifPage={setModifPage}></Test>}
           {ModifPage === "Form" && <Formulaire setModifPage={setModifPage} setformdata={setformdata}></Formulaire>}
-          {ModifPage === "Form2" && <Formulaire2 setModifPage={setModifPage} setformdata={setformdata}></Formulaire2>}
+          {/* {ModifPage === "Form2" && <Formulaire2 setModifPage={setModifPage} setformdata={setformdata}></Formulaire2>} */}
 
         </section>
         <Footer></Footer>

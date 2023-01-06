@@ -90,6 +90,31 @@ h1, p{
   border-radius: 5px;
 }
 
+
+
+/* FORMULAIRE ****************************************************/
+.suivant{
+  width: var(--sp_xxl);
+  font-size: var(--sp_sm);
+  background-color: var(--lilac);
+  padding: 2% 5%;
+  color: var(--light-green);
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+/* FORMULAIRE_FINI ****************************************************/
+
+.Formulaire_fini{
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 15%;
+  background: no-repeat url(/public/Group28.svg);
+  background-position: 75% 105%;
+}
+
 /* FOOTER ***********************************************************/
 
 footer {
