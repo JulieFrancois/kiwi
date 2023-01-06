@@ -42,6 +42,16 @@ main{
   margin: auto;
 }
 
+
+/* FONT ***********************************************************/
+
+/* @font-face {
+	font-family: 'Raleway';
+	src: url(‘/public/Raleway/Raleway-Bold.ttf’) format(‘ttf’),
+		url(‘/public/Raleway/Raleway-Regular.ttf’) format(‘ttf’)
+
+} */
+
 /* HEADER ***********************************************************/
 
 header{
@@ -90,14 +100,34 @@ h1, p{
   border-radius: 5px;
 }
 
-
-
 /* FORMULAIRE ****************************************************/
+.formulaire{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* section{
+  height: 100vh;
+} */
+
+input, select {
+/* height: 3em; */
+border: 1px solid;
+border-color: #9776FF;
+border-radius: 5px ;
+}
+
+
+.age, .genre, .ville, .domaine, .activite{
+  display: flex;
+  flex-direction: column;
+}
 .suivant{
   width: var(--sp_xxl);
   font-size: var(--sp_sm);
   background-color: var(--lilac);
-  padding: 2% 5%;
+  padding: 1% 3%;
   color: var(--light-green);
   text-decoration: none;
   border-radius: 5px;

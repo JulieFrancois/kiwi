@@ -17,15 +17,23 @@ const [FormRef,handleSubmit,resetForm] = useForm((data)=>
    
     {/* {console.log(data)} */}
   
-   <h1>Qui es-tu ?</h1>
+ 
    
-    <form ref={FormRef} onSubmit={handleSubmit}>
+    <form ref={FormRef} onSubmit={handleSubmit} className="formulaire">
+
+    <h1>Qui es-tu ?</h1>
+
+
+      <section>
 
         <label  className="age" >
-          Quel âge as-tu ?
+          Quel âge as-tu ? 
           <input type="number" name="age"/>
         </label>
 
+        </section>
+
+        <section>
         <label className="genre">
           Quel est ton genre ?
           <div>
@@ -50,10 +58,20 @@ const [FormRef,handleSubmit,resetForm] = useForm((data)=>
     
          </label>
 
+         </section>
+
+         <section>
+
         <label className="ville">
           Dans quelle ville habites-tu ?
-          <input type="text" name="ville" />
+          <input type="text" name="ville" /> 
         </label>
+
+
+        </section>
+
+
+        <section>
 
         <label className="activite">
           
@@ -67,8 +85,15 @@ const [FormRef,handleSubmit,resetForm] = useForm((data)=>
         </select>
 
         </label>
+
+        </section>
      
+        <section>
+
         <button className="suivant">Suivant</button>
+
+        </section>
+     
 
         </form>
     </>
