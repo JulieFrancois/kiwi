@@ -35,7 +35,7 @@ const [FormRef,handleSubmit,resetForm] = useForm((data)=>
 
         <section>
         <label className="genre">
-          Quel est ton genre ?
+          <p>Quel est ton genre ?</p>
           <div>
           <input type="radio" id="huey" name="genre" value="Femme"/>
           <label for="Femme">Femme</label>

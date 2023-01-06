@@ -116,13 +116,26 @@ input, select {
 border: 1px solid;
 border-color: #9776FF;
 border-radius: 5px ;
+background:rgba(0,0,0,0.0);
 }
 
+.age, .ville, .domaine, .activite{
+  font-size:larger;
+  font-weight: 600;
+}
+
+.genre p{
+  font-size:larger;
+  font-weight: 600;
+}
 
 .age, .genre, .ville, .domaine, .activite{
   display: flex;
   flex-direction: column;
 }
+
+
+
 .suivant{
   width: var(--sp_xxl);
   font-size: var(--sp_sm);
