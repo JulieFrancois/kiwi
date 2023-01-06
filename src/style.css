@@ -42,6 +42,16 @@ main{
   margin: auto;
 }
 
+
+/* FONT ***********************************************************/
+
+/* @font-face {
+	font-family: 'Raleway';
+	src: url(‘/public/Raleway/Raleway-Bold.ttf’) format(‘ttf’),
+		url(‘/public/Raleway/Raleway-Regular.ttf’) format(‘ttf’)
+
+} */
+
 /* HEADER ***********************************************************/
 
 header{
@@ -50,6 +60,7 @@ header{
   align-items: center;
   justify-content: space-between;
   padding: 0 var(--sp_sm);
+  
 }
 
 .logo{
@@ -93,6 +104,71 @@ h1, p{
   border-radius: 5px;
 }
 
+/* FORMULAIRE ****************************************************/
+.formulaire{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 400px;
+}
+
+.question{
+  height: 80vh;
+}
+
+.Titre{
+  display: flex;
+}
+/* section{
+  height: 100vh;
+} */
+
+input, select {
+/* height: 3em; */
+border: 1px solid;
+border-color: #9776FF;
+border-radius: 5px ;
+background:rgba(0,0,0,0.0);
+}
+
+.age, .ville, .domaine, .activite{
+  font-size:larger;
+  font-weight: 600;
+}
+
+.genre p{
+  font-size:larger;
+  font-weight: 600;
+}
+
+.age, .genre, .ville, .domaine, .activite{
+  display: flex;
+  flex-direction: column;
+}
+
+
+.suivant{
+  width: var(--sp_xxl);
+  font-size: var(--sp_sm);
+  background-color: var(--lilac);
+  padding: 1% 3%;
+  color: var(--light-green);
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+/* FORMULAIRE_FINI ****************************************************/
+
+.Formulaire_fini{
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 15%;
+  background: no-repeat url(/public/Group28.svg);
+  background-position: 75% 105%;
+}
+
 /* FOOTER ***********************************************************/
 
 footer {
@@ -100,6 +176,7 @@ footer {
   justify-content: space-between;
   height: 10vh;
   padding: 0 var(--sp_sm);
+  
 }
 
 footer > img{

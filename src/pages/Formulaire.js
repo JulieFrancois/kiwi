@@ -9,23 +9,33 @@ const [FormRef,handleSubmit,resetForm] = useForm((data)=>
   })
 
   return (
-    <div>
-        <h1>Qui es-tu ?</h1>
-        <form ref={FormRef} onSubmit={handleSubmit}>
-        <img onClick={() => setModifPage("App")} className="picto" src="./material-symbols_arrow-downward-rounded.png" title=""></img>
+    <>
+    {/* <a onClick={() => setModifPage("Form")} className="cta" href="#" title="">Retour</a> */}
+   
+    {/* {console.log(data)} */}
+    <img onClick={() => setModifPage("App")} className="picto" src="./material-symbols_arrow-downward-rounded.png" title=""></img>
         {/* console.log("click") */}
+    <form ref={FormRef} onSubmit={handleSubmit} className="formulaire">
 
-            <label>
-                Quel âge as-tu ?
-                <input type="number" name="name" />
-            </label>
+    <h1 className='Titre'>Qui es-tu ?</h1>
 
-            <label>
-                Quel est ton genre ?
-            <div>
-                <input type="radio" id="huey" name="genre" value="Femme"/>
-                <label for="Femme">Femme</label>
-            </div>
+
+      <section className='Question'>
+
+        <label  className="age" >
+          Quel âge as-tu ? 
+          <input type="number" name="age"/>
+        </label>
+
+        </section>
+
+        <section className='Question'>
+        <label className="genre">
+          <p>Quel est ton genre ?</p>
+          <div>
+          <input type="radio" id="huey" name="genre" value="Femme"/>
+          <label for="Femme">Femme</label>
+          </div>
 
             <div>
                 <input type="radio" id="dewey" name="genre" value="Homme"/>
@@ -44,25 +54,47 @@ const [FormRef,handleSubmit,resetForm] = useForm((data)=>
         
             </label>
 
-            <label>
-                Dans quelle ville habites-tu ?
-                <input type="text" name="name" />
-            </label>
+         </section>
 
-            <label>
-            Quel est ton domaine d'activité ?
-            <select name="domaine">
-                <option value="Art">Art</option>
-                <option value="Droit">Droit</option>
-                <option selected value="Politique">Politique</option>
-                <option value="Vente">Vente</option>
-            </select>
+         <section className='Question'>
 
-            </label>
-            <button>Suivant</button>
-            </form>
-        </div>
-)
+        <label className="ville">
+          Dans quelle ville habites-tu ?
+          <input type="text" name="ville" /> 
+        </label>
+
+
+        </section>
+
+
+        <section className='Question'>
+
+        <label className="activite">
+          
+         Quel est ton domaine d'activité ?
+
+        <select name="domaine">
+        <option value="Art">Art</option>
+        <option value="Droit">Droit</option>
+        <option selected value="Politique">Politique</option>
+        <option value="Vente">Vente</option>
+        </select>
+
+        </label>
+
+        </section>
+     
+        <section className='Question'>
+
+        <button className="suivant">Suivant</button>
+
+        </section>
+     
+
+        </form>
+    </>
+
+    )
 }
 export default Formulaire;
 
