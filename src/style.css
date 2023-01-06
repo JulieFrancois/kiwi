@@ -58,6 +58,9 @@ header{
 
 /* HERO ************************************************************/
 
+.picto{
+  width: 5%;
+}
 .hero{
   height: 80vh;
   display: flex;

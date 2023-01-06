@@ -1,6 +1,6 @@
 import React from 'react';
 
-function TEST ({setModifPage}) {
+function Hero ({setModifPage}) {
     return (
         <>
             <h1>PersonaFy. un nouvel outil pour aider les UX designers à réaliser leurs personae</h1>
@@ -13,4 +13,4 @@ function TEST ({setModifPage}) {
     }
 
 
-export default TEST;
+export default Hero;
