@@ -110,7 +110,7 @@ h1, p{
   transition: ease 0.5s;
 }
 
-/* FORMULAIRE ****************************************************/
+/* FORMULAIRE 1 ****************************************************/
 .formulaire{
   display: flex;
   flex-direction: column;
@@ -156,6 +156,26 @@ background:rgba(0,0,0,0.0);
 
 .suivant{
   padding: 1% 3%;
+}
+
+/* FORMULAIRE 2 ****************************************************/
+
+
+.personalite, .interets, .outils{
+  display: flex;
+  flex-direction: column;
+  font-size:larger;
+  font-weight: 600;
+}
+
+.espace{
+display: flex;
+justify-content: space-around;
+}
+
+.nom_categorie{
+  display:flex;
+  justify-content: center;
 }
 
 /* FORMULAIRE_FINI ****************************************************/
