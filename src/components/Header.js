@@ -3,7 +3,7 @@ import React from 'react';
 function Header() {
   return (
     <header>
-        <img class="logo" src="/PersonaFy..svg"/>
+        <img className="logo" src="/PersonaFy..svg"/>
         <nav>
           <img src="/socialmedia/Group27.png"/>
             {/* <ul>
