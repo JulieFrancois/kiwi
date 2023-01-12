@@ -10,7 +10,9 @@ const [FormRef,handleSubmit,resetForm] = useForm((data)=>
   })
 
   return (
-    <div>
+    <div className="formFond">
+    <div className="bonhomme2"></div>
+    <div className="bonhomme3"></div>
     <img onClick={() => setModifPage("App")} className="picto" src="./material-symbols_arrow-downward-rounded.png" title=""></img>
         {/* console.log("click") */}
     <form ref={FormRef} onSubmit={handleSubmit} className="formulaire">
@@ -25,27 +27,25 @@ const [FormRef,handleSubmit,resetForm] = useForm((data)=>
         <section className='Question'>
             <label className="genre">
             <p>Quel est ton genre ?</p>
-        <div>
-            <input type="radio" id="huey" name="genre" value="Femme"/>
-            <label for="Femme">Femme</label>
-        </div>
-        <div>
-            <input type="radio" id="dewey" name="genre" value="Homme"/>
-            <label for="Homme">Homme</label>
-        </div>
+            <div>
+                <input type="radio" className="radio" name="genre" value="Femme"/>
+                <label for="Femme">Femme</label>
+            </div>
+            <div>
+                <input type="radio" className="radio" name="genre" value="Homme"/>
+                <label for="Homme">Homme</label>
+            </div>
 
             <div>
-                <input type="radio" id="louie" name="genre" value="Autre"/>
+                <input type="radio" className="radio" name="genre" value="Autre"/>
                 <label for="Autre">Autre</label>
             </div>
 
             <div>
-                <input type="radio" id="louie" name="genre" value="Je ne souhaite pas préciser"/>
+                <input type="radio" className="radio" name="genre" value="Je ne souhaite pas préciser"/>
                 <label for="Je ne souhaite pas préciser">Je ne souhaite pas préciser</label>
             </div>
-        
             </label>
-
          </section>
 
          <section className='Question'>

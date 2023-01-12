@@ -35,6 +35,7 @@
 body{
   background-color: whitesmoke;
   background: no-repeat url(/public/Vector10.svg);
+  background-position: -55% 105%;
 }
 
 main{
@@ -73,11 +74,19 @@ nav > img{
   flex-direction: column;
   justify-content: center;
   padding: 0 15%;
-  background: no-repeat url(/public/Group28.svg);
-  background-position: 75% 105%;
+
   position: absolute;
   top: 10%;
   left: 5%;
+}
+
+.bonhomme1{
+  width: 20%;
+  height: 90vh;
+  background: no-repeat url(/public/Group28.svg);
+  background-position: 75% 105%;
+  position: absolute;
+  right: 20%;
 }
 
 h1{
@@ -111,6 +120,7 @@ h1, p{
 }
 
 /* FORMULAIRE ****************************************************/
+
 .formulaire{
   display: flex;
   flex-direction: column;
@@ -118,13 +128,48 @@ h1, p{
   /* gap: 400px; */
 }
 
+.formFond{
+  background: no-repeat url(/public/Group33.png);
+  background-position: 100%;
+  background-size: contain;
+}
+
+.bonhomme2{
+  width: 35%;
+  height: 100vh;
+  background: no-repeat url(/public/Group26.png);
+  background-position: 5%;
+  position: absolute;
+  top:110%
+}
+
+.bonhomme3{
+  width: 30%;
+  height: 100vh;
+  background: no-repeat url(/public/Group20.png);
+  background-position: 5%;
+  position: absolute;
+  top:220%;
+  right:0%
+}
+
+
 .Question{
-  height: 40vh;
+  height: 80vh;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  border: solid black;
+  /* border: solid black; */
+}
+
+.Question > div{
+  display: flex;
+  align-items: center;
+}
+
+.Question:last-child{
+  height: 10vh;
 }
 
 .Titre{
@@ -137,6 +182,12 @@ border: 1px solid;
 border-color: #9776FF;
 border-radius: 5px ;
 background:rgba(0,0,0,0.0);
+width: 20vw;
+height: 5vh;
+}
+
+.radio{
+
 }
 
 .age, .ville, .domaine, .activite{
@@ -147,6 +198,11 @@ background:rgba(0,0,0,0.0);
 .genre p{
   font-size:larger;
   font-weight: 600;
+}
+
+.Question:nth-child(1){
+  background: no-repeat url(/public/Group26.png);
+  /* background-position: 100%; */
 }
 
 .age, .genre, .ville, .domaine, .activite{
