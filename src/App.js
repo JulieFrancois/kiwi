@@ -28,11 +28,10 @@ function App() {
         {ModifPage === "Form2" && <Formulaire2 setModifPage={setModifPage} setformdata={setformdata}></Formulaire2>}
         {ModifPage === "FormF" && <Formulaire_fini setModifPage={setModifPage} setformdata={setformdata}></Formulaire_fini>}
 
-        
+
       </>
   );
 }
-
 
 export default App;
 

@@ -14,5 +14,4 @@ function Hero ({setModifPage}) {
         );
     }
 
-
 export default Hero;

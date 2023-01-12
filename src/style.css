@@ -42,7 +42,6 @@ main{
   margin: auto;
 }
 
-
 /* FONT ***********************************************************/
 
 /* @font-face {
@@ -162,10 +161,26 @@ background:rgba(0,0,0,0.0);
   height: 80vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
   padding: 0 15%;
-  background: no-repeat url(/public/Group28.svg);
+  background: no-repeat url(/public/Group19.svg);
   background-position: 75% 105%;
+}
+.texte{
+  text-align: center;
+}
+
+.lien{
+  font-size: 1.2em;
+}
+
+.ponctuation, .lien{
+color: #9776FF;
+}
+
+.dashboard{
+  padding: 1% 3%;
 }
 
 /* FOOTER ***********************************************************/
@@ -175,7 +190,6 @@ footer {
   justify-content: space-between;
   height: 10vh;
   padding: 0 var(--sp_sm);
-  
 }
 
 footer > img{
