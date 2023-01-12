@@ -35,7 +35,7 @@
 body{
   background-color: whitesmoke;
   background: no-repeat url(/public/Vector10.svg);
-  background-position: -55% 105%;
+  background-position: -30% 105%;
 }
 
 main{
@@ -74,22 +74,22 @@ nav > img{
 /* HERO ************************************************************/
 
 .picto{
-  width: 30px;
+  width: 50px;
+  padding: 1% 0 0 5%;
 }
 .hero{
   height: 80vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 0 15%;
-
+  /* padding: 0 15%; */
   position: absolute;
   top: 10%;
   left: 5%;
 }
 
 .bonhomme1{
-  width: 20%;
+  width: 30%;
   height: 90vh;
   background: no-repeat url(/public/Group28.svg);
   background-position: 75% 105%;
@@ -303,7 +303,7 @@ footer > img{
 
 /* RESPONSIVE*********************************************/
 
-@media screen and (max-width: var(--tablette)) {
+@media screen and (max-width: 700px) {
   
   .logo{
     width: 35%;
@@ -316,4 +316,12 @@ footer > img{
   .cta{
     padding: 5% 3%;
   }
+
+  .bonhomme1{
+    background-color: #9776FF;
+  }
+
+  /* body{
+    background-color: #180553;
+  } */
 }
