@@ -236,7 +236,7 @@ height: 5vh;
 
 .espace{
 display: flex;
-justify-content: space-around;
+justify-content: space-between;
 }
 
 .nom_categorie{
@@ -246,7 +246,24 @@ justify-content: space-around;
 
 input[type=range]{
   -webkit-appearance: none; 
+  border: none;
 }
+
+input[type=range].custom-slider.custom-slider-bullet {
+  height: 1.5em;
+  color: transparent;
+  background: transparent;
+  background-image: linear-gradient(to bottom, #180553, #180553, #180553);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 25%;
+}
+
+input[type=range].custom-slider.custom-slider-bullet::-webkit-slider-thumb {
+  width: 2em;
+ 
+}
+
 
 /* FORMULAIRE_FINI ****************************************************/
 
