@@ -3,27 +3,34 @@ import React from 'react';
 // import './App.css';
 // import Header from '../components/Header';
 import Footer from '../components/Footer';
+import useForm from '../utile/useform';
 
-function Formulaire_fini(setModifPage) {
+function Formulaire_fini({setModifPage, setformdata}) {
+  
+  // const Formulaire = ({setModifPage}) => {
+    const [FormRef,handleSubmit,resetForm] = useForm((data)=>
+    {setModifPage("FormF");setformdata(data)// Write your submit function here
+  })
   
     //JSX
     return (
         <>
           {/* <Header></Header> */}
           <section className="Formulaire_fini">
+           <div className='elements'>
           <h1>Félicitations <span className='ponctuation'>!</span></h1>
           <div className='texte'>
-            <p>Tu as terminé ton formulaire.</p>
-            <p>Envoie ce lien à tes utilisateurs pour découvrir ton persona</p>
+            <p>Tu as aidé un UX designer à créer un persona.</p>
+            <p>N’hésite pas à revenir</p>
           </div>
 
-          <div className='lien'>
-          <a onClick={() => setModifPage("FormF")} className="" href="#" title="">Lien à envoyer aux users</a>
-          </div>
+          {/* <div className='lien'>
+          <a onClick={() => setModifPage("Formulaire_fini")} className="" href="#" title="">Lien à envoyer aux users</a>
+          </div> */}
           
-          <a onClick={() => setModifPage("FormF")} className="cta dashboard" href="#" title="">Voir mon dashboard</a>
+          <a onClick={() => setModifPage("App")} className="cta dashboard" href="#" title="">Voir mon dashboard</a>
             {/* <a className='dashboard'>Voir mon dashboard</a> */}
-            
+            </div>
           </section>
           <Footer></Footer>
         </>

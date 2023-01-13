@@ -254,18 +254,27 @@ input[type=range]{
   height: 80vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 15%;
+  padding: O 15%;
   background: no-repeat url(/public/Group19.svg);
-  background-position: 75% 105%;
+  background-position: 10% 105%;
 }
+
+.elements{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding: 10% 15%;
+ 
+}
+
 .texte{
   text-align: center;
 }
 
 .lien{
   font-size: 1.2em;
+  padding: 4%;
 }
 
 .ponctuation, .lien{
@@ -273,7 +282,7 @@ color: #9776FF;
 }
 
 .dashboard{
-  padding: 1% 3%;
+  padding: 2% 3%;
 }
 
 /* FOOTER ***********************************************************/
