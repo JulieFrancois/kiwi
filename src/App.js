@@ -18,27 +18,21 @@ function App() {
   // const [Genre, setGenre] = React.useState("Femme");()
 
   React.useEffect(()=>{
-
-     axios("https://illustrious-cat-7fb4d9.netlify.app/api/persona", {
-      method: 'GET',
-      headers: {
-        'Access-Control-Allow-Origin': '*',
-        'Access-Control-Allow-Methods': 'GET,POST,OPTIONS,PUT,PATCH,DELETE',
-        'Access-Control-Allow-Headers': 'x-access-token, Origin, X-Requested-With, Content-Type, Accept',
-        "Accept":"application/json, text/plain, /", "Content-Type":"multipart/form-data"
-        //lignes à enlever au fur et à mesure en partant du bas si ça ne fonctionne pas sur un réseau NORMAL
-      },
-      withCredentials: true,
-      //si rien ne fonctionne à retirer en ayant tout remis au dessus
-    }).then(response => {
-      console.log(response);
-    })
-    .catch(function (error) {
-    // en cas d’échec de la requête
-    console.log(error);
-    })
+     console.log(postData("https://illustrious-cat-7fb4d9.netlify.app/api/persona"))
   },[])
-
+    async function postData(url = '', data = {}) {
+      const response = await fetch(url , {
+        method: 'GET', // *GET, POST, PUT, DELETE, etc.
+        mode: 'no-cors', 
+        cache: 'no-cache', 
+        headers: {
+          'Content-Type': 'application/json'
+          // 'Content-Type': 'application/x-www-form-urlencoded',
+        },
+        // body: JSON.stringify(data) // body data type must match "Content-Type" header
+      });
+      return response; // parses JSON response into native JavaScript objects
+    }
   //JSX
   return (
       <>
@@ -50,8 +44,6 @@ function App() {
         {ModifPage === "Form" && <Formulaire setModifPage={setModifPage} setformdata={setformdata}></Formulaire>}
         {ModifPage === "Form2" && <Formulaire2 setModifPage={setModifPage} setformdata={setformdata}></Formulaire2>}
         {ModifPage === "FormF" && <Formulaire_fini setModifPage={setModifPage} setformdata={setformdata}></Formulaire_fini>}
-
-
       </>
   );
 }

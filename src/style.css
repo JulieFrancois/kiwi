@@ -148,7 +148,8 @@ h1, p{
   background: no-repeat url(/public/Group26.png);
   background-position: 5%;
   position: absolute;
-  top:110%
+  top:110%;
+  background-size: contain;
 }
 
 .bonhomme3{
@@ -158,7 +159,8 @@ h1, p{
   background-position: 5%;
   position: absolute;
   top:220%;
-  right:0%
+  right:0%;
+  background-size: contain;
 }
 
 
@@ -242,6 +244,10 @@ justify-content: space-around;
   justify-content: center;
 }
 
+input[type=range]{
+  -webkit-appearance: none; 
+}
+
 /* FORMULAIRE_FINI ****************************************************/
 
 .Formulaire_fini{
@@ -309,10 +315,27 @@ footer > img{
   }
 
   .bonhomme1{
-    background-color: #9776FF;
+    /* background-color: #9776FF; */
+    width: 100%;
+    height: 60vh;
+    position:initial;
+  }
+
+  .hero{
+    height: 120%;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    text-align: center;
+    left: 0;
+    /* padding: 0 10%; */
   }
 
   /* body{
     background-color: #180553;
   } */
+
+  .Question{
+    height: 60vh;
+  }
 }
