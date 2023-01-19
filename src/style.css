@@ -371,7 +371,6 @@ input[type=range].custom-slider.custom-slider-bullet::-webkit-slider-thumb {
 
 }  */
 
-.personaliteR,
 .interet,
 .Profil,
 .frustrations,
@@ -401,13 +400,6 @@ input[type=range].custom-slider.custom-slider-bullet::-webkit-slider-thumb {
   background-position: bottom center;
   padding: 0 8% 0 8%;
 }
-
-.personaliteR {
-  /* height: 80vh; */
-  display: flex;
-  flex-direction: column;
-  padding: 5%;
-} 
 
 .gauche {
   text-align: start;
