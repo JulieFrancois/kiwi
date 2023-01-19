@@ -15,6 +15,7 @@ function Persona({setModifPage, setformdata}) {
 
   const [DATABASE,setDATABASE] = React.useState([]);
   const [Age,setAge] = React.useState(0);
+  const [Gender,setGender] = React.useState(0);
   
   React.useEffect(()=>{
     //  console.log(postData("https://illustrious-cat-7fb4d9.netlify.app/api/persona"))
@@ -23,13 +24,32 @@ function Persona({setModifPage, setformdata}) {
       .get("https://illustrious-cat-7fb4d9.netlify.app/api/persona")
       .then((response) => response)
       .then((data) => {
+
+    // AGE
     let NombreTotal = 0
     let Total = 0
+    let Homme = 0
+    let Femme = 0
     data.data.forEach(element => {
         NombreTotal = NombreTotal+1
         Total = Total+element.age
+
+        if(
+            element.gender == "Homme"
+        )
+        Homme = Homme+1
+        if(
+            element.gender == "Femme"
+        )
+        Femme = Femme+1
     });
     setAge(Total/NombreTotal)
+    if(Homme > Femme) 
+    setGender("Homme")
+    if(Femme > Homme) 
+    setGender("Femme")
+
+    // GENRE
 
     })
   },[])
@@ -132,7 +152,7 @@ function Persona({setModifPage, setformdata}) {
         <h1 class='Profil'>Profil</h1>
 
         <p>{Age} ans</p>
-        <p>Femme</p>
+        <p>{Gender}</p>
         <p>Région parisienne</p>
         <p>Metiers du web</p>
 
