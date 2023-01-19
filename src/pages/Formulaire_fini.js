@@ -28,7 +28,7 @@ function Formulaire_fini({setModifPage, setformdata}) {
           <a onClick={() => setModifPage("Formulaire_fini")} className="" href="#" title="">Lien à envoyer aux users</a>
           </div> */}
           
-          <a onClick={() => setModifPage("App")} className="cta dashboard" href="#" title="">Voir mon dashboard</a>
+          <a onClick={() => setModifPage("Persona")} className="cta dashboard" href="#" title="">Voir mon dashboard</a>
             {/* <a className='dashboard'>Voir mon dashboard</a> */}
             </div>
           </section>
