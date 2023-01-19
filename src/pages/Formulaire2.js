@@ -24,7 +24,7 @@ function Formulaire2({setModifPage, setformdata}) {
         <label className='personalite'>
           <label for="Introvertie">Introvertie</label>
           <section className='espace'>
-          <input type="range" name="personalite" id="volume" min="0" max="11"  step="1" className='custom-slider custom-slider-bullet'/>
+          <input type="range" name="personalite" id="volume" min="1" max="10"  step="1" className='custom-slider custom-slider-bullet'/>
           <datalist>
             <option value="1">1</option>
             <option value="2">2</option>
@@ -47,7 +47,7 @@ function Formulaire2({setModifPage, setformdata}) {
           À quel point aimes-tu ça ? 
           <label className='nom_categorie'> Musique pop </label>
           <section className='espace'></section>
-          <input type="range" name="interets" id="volume" min="0" max="11"  step="1" list="tickmarks" className='custom-slider custom-slider-bullet'/>
+          <input type="range" name="interets" id="volume" min="1" max="10"  step="1" list="tickmarks" className='custom-slider custom-slider-bullet'/>
             <datalist id="tickmarks">
               <option value="1"></option>
               <option value="2"></option>
