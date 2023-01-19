@@ -246,8 +246,8 @@ datalist {
 }
 
 .personalite {
-  display: flex;
-  flex-direction: row;
+  /* display: flex;
+  flex-direction: row; */
   font-size: larger;
   font-weight: 600;
 }

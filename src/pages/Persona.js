@@ -1,14 +1,10 @@
 import React from 'react';
-// import logo from './logo.svg';
-// import './App.css';
-// import Header from '../components/Header';
 import Footer from '../components/Footer';
 import useForm from '../utile/useform';
 import axios from 'axios';
 
 function Persona({setModifPage, setformdata}) {
-  
-  // const Formulaire = ({setModifPage}) => {
+
     const [FormRef,handleSubmit,resetForm] = useForm((data)=>
     {setModifPage("Persona");setformdata(data)// Write your submit function here
   })
@@ -18,7 +14,6 @@ function Persona({setModifPage, setformdata}) {
   const [Gender,setGender] = React.useState(0);
   
   React.useEffect(()=>{
-    //  console.log(postData("https://illustrious-cat-7fb4d9.netlify.app/api/persona"))
 
     axios
       .get("https://illustrious-cat-7fb4d9.netlify.app/api/persona")
@@ -48,8 +43,13 @@ function Persona({setModifPage, setformdata}) {
     setGender("Homme")
     if(Femme > Homme) 
     setGender("Femme")
-
-    // GENRE
+    if(Homme === Femme) {
+        setGender(Math.random() < 0.5 ? 'Homme' : 'Femme')
+    } else if(Homme > Femme) {
+        setGender("Homme")
+    } else {
+        setGender("Femme")
+    }    
 
     })
   },[])
