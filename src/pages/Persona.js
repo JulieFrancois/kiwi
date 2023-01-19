@@ -62,7 +62,7 @@ function Persona({setModifPage, setformdata}) {
     <section className="persona">
 
 <div className="gauche">
-    <div className="personalite">
+    <div className="personaliteR">
         <h1 className='textB'>Personnalité</h1>
 
         {/* <!-- <p>Esprit</p> -->
@@ -71,7 +71,7 @@ function Persona({setModifPage, setformdata}) {
         <p>tactique</p> --> */}
 
         <label for="esprit" className="textB">Esprit</label>
-        <input type="range" name="personalite" id="volume" min="0" max="11" step="1" />
+        <input type="range" name="personaliteR" id="volume" min="0" max="11" step="1" />
         <datalist>
             <option value="1"></option>
             <option value="2"></option>
@@ -86,7 +86,7 @@ function Persona({setModifPage, setformdata}) {
         </datalist>
 
         <label for="Extravertie" className="textB">Energie</label>
-        <input type="range" name="personalite" id="volume" min="0" max="11" step="1" />
+        <input type="range" name="personaliteR" id="volume" min="0" max="11" step="1" />
         <datalist>
             <option value="1"></option>
             <option value="2"></option>
@@ -101,7 +101,7 @@ function Persona({setModifPage, setformdata}) {
         </datalist>
 
         <label for="Extravertie" className="textB">Nature</label>
-        <input type="range" name="personalite" id="volume" min="0" max="11" step="1" />
+        <input type="range" name="personaliteR" id="volume" min="0" max="11" step="1" />
         <datalist>
             <option value="1"></option>
             <option value="2"></option>
@@ -116,7 +116,7 @@ function Persona({setModifPage, setformdata}) {
         </datalist>
 
         <label for="Extravertie" className="textB">Tactique</label>
-        <input type="range" name="personalite" id="volume" min="0" max="11" step="1" />
+        <input type="range" name="personaliteR" id="volume" min="0" max="11" step="1" />
         <datalist>
             <option value="1"></option>
             <option value="2"></option>
