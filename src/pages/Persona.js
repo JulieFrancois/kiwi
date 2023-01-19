@@ -4,6 +4,7 @@ import React from 'react';
 // import Header from '../components/Header';
 import Footer from '../components/Footer';
 import useForm from '../utile/useform';
+import axios from 'axios';
 
 function Persona({setModifPage, setformdata}) {
   
@@ -11,7 +12,29 @@ function Persona({setModifPage, setformdata}) {
     const [FormRef,handleSubmit,resetForm] = useForm((data)=>
     {setModifPage("Persona");setformdata(data)// Write your submit function here
   })
+
+  const [DATABASE,setDATABASE] = React.useState([]);
+  const [Age,setAge] = React.useState(0);
   
+  React.useEffect(()=>{
+    //  console.log(postData("https://illustrious-cat-7fb4d9.netlify.app/api/persona"))
+
+    axios
+      .get("https://illustrious-cat-7fb4d9.netlify.app/api/persona")
+      .then((response) => response)
+      .then((data) => {
+    let NombreTotal = 0
+    let Total = 0
+    data.data.forEach(element => {
+        NombreTotal = NombreTotal+1
+        Total = Total+element.age
+    });
+    setAge(Total/NombreTotal)
+
+    })
+  },[])
+
+
     //JSX
     return (
         <>
