@@ -166,7 +166,7 @@ function Persona({setModifPage, setformdata}) {
     </div>
 
     <div className="outils">
-        <h1 className='textB'>Outils</h1>
+        <h1 className="textB">Outils</h1>
 
         <p className="textB">Réseaux sociaux</p>
         <p className="textB">Web</p>

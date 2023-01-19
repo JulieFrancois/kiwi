@@ -156,7 +156,7 @@ p {
   background: no-repeat url(/public/Group26.png);
   background-position: 5%;
   position: absolute;
-  top:110%;
+  top: 110%;
   background-size: contain;
 }
 
@@ -166,15 +166,15 @@ p {
   background: no-repeat url(/public/Group20.png);
   background-position: 5%;
   position: absolute;
-  top:220%;
-  right:0%;
+  top: 220%;
+  right: 0%;
   background-size: contain;
 }
 
 
 .Question {
   height: 70vh;
-/*width: 100%;
+  /*width: 100%;
   display: flex;
   justify-content: center; */
   align-items: center;
@@ -259,6 +259,7 @@ datalist {
   font-size: larger;
   font-weight: 600;
 }
+
 /* 
 .espace{
 display: flex;
@@ -270,20 +271,26 @@ justify-content: space-between;
   justify-content: center;
 }
 
-input[type=range]{
-  -webkit-appearance: none; 
+input[type=range] {
+  -webkit-appearance: none;
   border: none;
 }
 
 input[type=range].custom-slider {
-  -webkit-appearance: none;     /*nécessaire pour Chrome */
-  padding: 0;                   /* nécessaire pour IE */
-  font: inherit;                /* même rendu suivant font document */
+  -webkit-appearance: none;
+  /*nécessaire pour Chrome */
+  padding: 0;
+  /* nécessaire pour IE */
+  font: inherit;
+  /* même rendu suivant font document */
   outline: none;
-  color: #069;                  /* sert pour couleur de référence, via currentColor, pour le curseur */
+  color: #069;
+  /* sert pour couleur de référence, via currentColor, pour le curseur */
   opacity: .8;
-  background: #CCC;             /* sert pour couleur de fond de la zone de déplacement */
-  box-sizing: border-box;       /* même modèle de boîte pour tous */
+  background: #CCC;
+  /* sert pour couleur de fond de la zone de déplacement */
+  box-sizing: border-box;
+  /* même modèle de boîte pour tous */
   transition: opacity .2s;
   cursor: pointer;
 }
@@ -306,12 +313,15 @@ input[type=range].custom-slider.custom-slider-bullet {
 
 input[type=range].custom-slider.custom-slider-bullet::-webkit-slider-thumb {
   width: 2em;
-  padding: 0.25em;                                              /* largeur du bord */
+  padding: 0.25em;
+  /* largeur du bord */
   border: 1px solid #888;
   border-radius: 50%;
   box-shadow: 0 0 .5em #FFF inset;
-  background: linear-gradient(#888, #FFF) content-box,          /* le centre */
-              linear-gradient(-90deg, #888, #DDD) border-box;   /* le bord */
+  background: linear-gradient(#888, #FFF) content-box,
+    /* le centre */
+    linear-gradient(-90deg, #888, #DDD) border-box;
+  /* le bord */
 }
 
 
@@ -353,31 +363,28 @@ input[type=range].custom-slider.custom-slider-bullet::-webkit-slider-thumb {
   padding: 2% 3%;
 }
 
-
 /* PERSONA ****************************************************/
 
-/* .personalite,
-.textB,
+/* .textB {
+
+  color: white;
+
+}  */
+
+.personalite,
 .interet,
 .Profil,
 .frustrations,
 .outils {
 
-  color: white;
-
-} */
-
-.personalite,
-.interet, .Profil, .frustrations, .outils {
-
-  margin: 25% 0 10% 0;
+  margin: 10% 0 5% 0;
 }
 
 .bouton {
 
-  width: 15rem;
-  font-size: 1, 5rem;
   background-color: #DBF227;
+  width: var(--sp_xxl);
+  font-size: var(--sp_sm);
   padding: 2% 5%;
   text-decoration: none;
   border-radius: 5px;
@@ -385,15 +392,22 @@ input[type=range].custom-slider.custom-slider-bullet::-webkit-slider-thumb {
 }
 
 .persona {
-  height: 80vh;
+  /* height: 80vh; */
   display: flex;
   align-items: center;
   justify-content: space-between;
   background: no-repeat url(/public/Group38.svg);
   background-size: 50vh;
   background-position: bottom center;
-  padding: 5%;
+  padding: 0 8% 0 8%;
 }
+
+.personalite {
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  padding: 5%;
+} 
 
 .gauche {
   text-align: start;
@@ -402,6 +416,7 @@ input[type=range].custom-slider.custom-slider-bullet::-webkit-slider-thumb {
 .droite {
   text-align: end;
 }
+
 
 /* FOOTER ***********************************************************/
 
@@ -441,14 +456,14 @@ footer>img {
     padding: 5% 3%;
   }
 
-  .bonhomme1{
+  .bonhomme1 {
     /* background-color: #9776FF; */
     width: 100%;
     height: 60vh;
-    position:initial;
+    position: initial;
   }
 
-  .hero{
+  .hero {
     height: 120%;
     display: flex;
     /* justify-content: center; */
@@ -462,7 +477,7 @@ footer>img {
     background-color: #180553;
   } */
 
-  .Question{
+  .Question {
     height: 60vh;
   }
 }
