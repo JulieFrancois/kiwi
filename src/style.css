@@ -127,6 +127,7 @@ p {
   border-radius: 5px;
   text-align: center;
   border: solid var(--lilac);
+  display: block;
 }
 
 .cta:hover {
@@ -205,6 +206,9 @@ select {
   height: 5vh;
 }
 
+input.radio{
+  height: 2vh;
+}
 
 .age,
 .ville,
