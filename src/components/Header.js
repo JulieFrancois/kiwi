@@ -1,22 +1,12 @@
 import React from 'react';
 
-function Header() {
+function Header({setModifPage}) {
   return (
     <header>
         <img className="logo" src="/PersonaFy..svg"/>
         <nav>
-          <img src="/socialmedia/Group27.png"/>
-            {/* <ul>
-                <li><a href="" title="">pricing</a></li>
-                <li><a href="" title="">blog</a></li>
-                <li><a href="" title="">widgets</a></li>
-                <li><a href="" title="">feedback</a></li>
-            </ul> */}
+        <a onClick={() => setModifPage("Dashboard")} className="cta" href="#" title=""><img src="/socialmedia/Group27.png"/></a>
         </nav>
-        {/* <div>
-            <a href="" title="">sign in</a>
-            <a className="bouton" href="" title="">sign up for free</a>
-        </div> */}
     </header>
   );
 }
