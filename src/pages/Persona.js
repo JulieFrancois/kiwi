@@ -12,6 +12,7 @@ function Persona({setModifPage, setformdata}) {
   const [DATABASE,setDATABASE] = React.useState([]);
   const [Age,setAge] = React.useState(0);
   const [Gender,setGender] = React.useState(0);
+  const [City, setCity] = React.useState(0);
   
   React.useEffect(()=>{
 
@@ -20,37 +21,43 @@ function Persona({setModifPage, setformdata}) {
       .then((response) => response)
       .then((data) => {
 
-    // AGE
+    //reset
     let NombreTotal = 0
     let Total = 0
     let Homme = 0
     let Femme = 0
+    let City = 0
+
     data.data.forEach(element => {
+        //AGE
         NombreTotal = NombreTotal+1
         Total = Total+element.age
 
+        // GENRE
         if(
             element.gender == "Homme"
         )
         Homme = Homme+1
+
         if(
             element.gender == "Femme"
         )
         Femme = Femme+1
+
+        //VILLE
+        City = element.city
+
     });
     setAge(Total/NombreTotal)
     if(Homme > Femme) 
     setGender("Homme")
     if(Femme > Homme) 
     setGender("Femme")
-    if(Homme === Femme) {
-        setGender(Math.random() < 0.5 ? 'Homme' : 'Femme')
-    } else if(Homme > Femme) {
-        setGender("Homme")
-    } else {
-        setGender("Femme")
-    }    
-
+    if(Homme === Femme){
+        setGender(Math.random() < 0.5 ? "Homme" : "Femme") 
+      } else {
+        setGender(Homme > Femme ? "Homme" : "Femme")
+      }
     })
   },[])
 
