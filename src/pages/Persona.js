@@ -16,18 +16,18 @@ function Persona({setModifPage, setformdata}) {
     return (
         <>
         
-        <section class="persona">
+    <section className="persona">
 
-<div class="gauche">
-    <div class="personalite">
-        <h1 class='personalite'>Personnalité</h1>
+<div className="gauche">
+    <div className="personalite">
+        <h1 className='textB'>Personnalité</h1>
 
         {/* <!-- <p>Esprit</p> -->
         <!-- <p>Energie</p> -->
         <!-- <p>Nature</p>
         <p>tactique</p> --> */}
 
-        <label for="esprit">Esprit</label>
+        <label for="esprit" className="textB">Esprit</label>
         <input type="range" name="personalite" id="volume" min="0" max="11" step="1" />
         <datalist>
             <option value="1"></option>
@@ -42,7 +42,7 @@ function Persona({setModifPage, setformdata}) {
             <option value="10"></option>
         </datalist>
 
-        <label for="Extravertie">Energie</label>
+        <label for="Extravertie" className="textB">Energie</label>
         <input type="range" name="personalite" id="volume" min="0" max="11" step="1" />
         <datalist>
             <option value="1"></option>
@@ -57,7 +57,7 @@ function Persona({setModifPage, setformdata}) {
             <option value="10"></option>
         </datalist>
 
-        <label for="Extravertie">Nature</label>
+        <label for="Extravertie" className="textB">Nature</label>
         <input type="range" name="personalite" id="volume" min="0" max="11" step="1" />
         <datalist>
             <option value="1"></option>
@@ -72,7 +72,7 @@ function Persona({setModifPage, setformdata}) {
             <option value="10"></option>
         </datalist>
 
-        <label for="Extravertie">Tactique</label>
+        <label for="Extravertie" className="textB">Tactique</label>
         <input type="range" name="personalite" id="volume" min="0" max="11" step="1" />
         <datalist>
             <option value="1"></option>
@@ -89,45 +89,44 @@ function Persona({setModifPage, setformdata}) {
 
     </div>
 
-    <div class="interet">
-        <h1 class='interet'>Centres d'intérêts</h1>
+    <div className="interet">
+        <h1 className='textB'>Centres d'intérêts</h1>
 
-        <p>Cuisine</p>
-        <p>Cinéma</p>
-        <p>Réseaux sociaux</p>
+        <p className="textB">Cuisine</p>
+        <p className="textB">Cinéma</p>
+        <p className="textB">Réseaux sociaux</p>
 
     </div>
 
-    <a onClick={() => setModifPage("App")} className="cta telecharger" href="#" title="">Télécharger</a>
-
+    <a href="#" title="" className="bouton">Télécharger</a>
 
 </div>
 
-<div class="droite">
+<div className="droite">
 
-    <div class="profil">
-        <h1 class='Profil'>Profil</h1>
+    <div className="profil">
+        <h1 className='textB'>Profil</h1>
 
-        <p>20 ans</p>
-        <p>Femme</p>
-        <p>Région parisienne</p>
-        <p>Metiers du web</p>
-
-    </div>
-
-    <div class="frustrations">
-        <h1 class='frustrations'>Frustations</h1>
-
-        <p>Manque de temps</p>
-        <p>Pas assez d'organisation</p>
+        <p className="textB">20 ans</p>
+        <p className="textB">Femme</p>
+        <p className="textB">Région parisienne</p>
+        <p className="textB">Metiers du web</p>
 
     </div>
 
-    <div class="outils">
-        <h1 classe='outils'>Outils</h1>
+    <div className="frustrations">
+        <h1 className='textB'>Frustations</h1>
 
-        <p>Réseaux sociaux</p>
-        <p>Web</p>
+        <p className="textB">Manque de temps</p>
+        <p className="textB">Pas assez d'organisation</p>
+
+    </div>
+
+    <div className="outils">
+        <h1 className='textB'>Outils</h1>
+
+        <p className="textB">Réseaux sociaux</p>
+        <p className="textB">Web</p>
 
     </div>
 

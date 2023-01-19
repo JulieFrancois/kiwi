@@ -351,15 +351,16 @@ input[type=range].custom-slider.custom-slider-bullet::-ms-thumb {
 
 /* PERSONA ****************************************************/
 
-.personalite,
-.textB,
-.interet,
-.Profil,
-.frustrations,
-.outils {
+.textB{
 
   color: white;
 
+}
+
+.personalite,
+.interet, .Profil, .frustrations, .outils {
+
+  margin: 25% 0 10% 0;
 }
 
 .bouton {
@@ -379,7 +380,8 @@ input[type=range].custom-slider.custom-slider-bullet::-ms-thumb {
   align-items: center;
   justify-content: space-between;
   background: no-repeat url(/public/Group38.svg);
-  background-position: center;
+  background-size: 50vh;
+  background-position: bottom center;
   padding: 5%;
 }
 
