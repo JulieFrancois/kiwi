@@ -20,8 +20,8 @@ function Formulaire2({setModifPage, setformdata}) {
 
       <section className='Question'>
       <h2>Comment te définirais-tu ?</h2>
+      <label className='nom_categorie'> Esprit</label>
         <label className='personalite'>
-          <label className='nom_categorie'> Esprit</label>
           <label for="Introvertie">Introvertie</label>
           <section className='espace'>
           <input type="range" name="personalite" id="volume" min="0" max="11"  step="1" className='custom-slider custom-slider-bullet'/>
