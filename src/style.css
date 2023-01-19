@@ -1,44 +1,50 @@
-:root{
+:root {
   /* Couleurs */
-  --lilac:#9776FF;
-  --fluo_green:#DBF227;
-  --light-green:#FCFFE5;
-  --blue:#300AA5;
-  --dark_blue:#180553;
+  --lilac: #9776FF;
+  --fluo_green: #DBF227;
+  --light-green: #FCFFE5;
+  --blue: #300AA5;
+  --dark_blue: #180553;
 
   /* Typographie */
   --ff: 'Raleway', sans-serif;
 
-  --fs_h1 : 3rem;
-  --fs_h2 : 2.25rem;
-  --fs_h3 : 1.5rem;
+  --fs_h1: 3rem;
+  --fs_h2: 2.25rem;
+  --fs_h3: 1.5rem;
 
   /* Espacements */
-  --sp_xs : 0.625rem; /*  10px */
-  --sp_sm : 1.25rem;  /*  20px */
-  --sp_md : 2.5rem;   /*  40px */
-  --sp_lg : 5rem;     /*  80px */
-  --sp_xl : 10rem;    /* 160px */
-  --sp_xxl: 15rem;    /* 240px */
+  --sp_xs: 0.625rem;
+  /*  10px */
+  --sp_sm: 1.25rem;
+  /*  20px */
+  --sp_md: 2.5rem;
+  /*  40px */
+  --sp_lg: 5rem;
+  /*  80px */
+  --sp_xl: 10rem;
+  /* 160px */
+  --sp_xxl: 15rem;
+  /* 240px */
 
   /* Formats responsive*/
   --desktop: 1200px;
   --tablette: 700px;
 }
 
-*{
+* {
   margin: 0;
   padding: 0;
   font-family: var(--ff);
-  }
+}
 
-body{
+body {
   background-color: whitesmoke;
   background: no-repeat url(/public/Vector10.svg);
   background-position: -30% 105%;
 }
 
-main{
+main {
   width: 98%;
   margin: auto;
 }
@@ -54,30 +60,31 @@ main{
 
 /* HEADER ***********************************************************/
 
-header{
+header {
   height: 10vh;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0 var(--sp_sm);
-  
+
 }
 
-.logo{
+.logo {
   width: 15%;
 }
 
-nav > img{
+nav>img {
   width: 25px;
 }
 
 /* HERO ************************************************************/
 
-.picto{
+.picto {
   width: 50px;
   padding: 1% 0 0 5%;
 }
-.hero{
+
+.hero {
   height: 80vh;
   display: flex;
   flex-direction: column;
@@ -88,7 +95,7 @@ nav > img{
   left: 5%;
 }
 
-.bonhomme1{
+.bonhomme1 {
   width: 30%;
   height: 90vh;
   background: no-repeat url(/public/Group28.svg);
@@ -97,19 +104,20 @@ nav > img{
   right: 20%;
 }
 
-h1{
+h1 {
   font-size: var(--fs_h1);
 }
 
-p{
+p {
   font-size: var(--sp_sm);
 }
 
-h1, p{
+h1,
+p {
   padding-bottom: var(--sp_sm);
 }
 
-.cta{
+.cta {
   width: var(--sp_xxl);
   font-size: var(--sp_sm);
   background-color: var(--lilac);
@@ -121,7 +129,7 @@ h1, p{
   border: solid var(--lilac);
 }
 
-.cta:hover{
+.cta:hover {
   background-color: transparent;
   color: black;
   transition: ease 0.5s;
@@ -129,40 +137,40 @@ h1, p{
 
 /* FORMULAIRE ****************************************************/
 
-.formulaire{
+.formulaire {
   display: flex;
   flex-direction: column;
   align-items: center;
   /* gap: 400px; */
 }
 
-.formFond{
+.formFond {
   background: no-repeat url(/public/Group33.png);
   background-position: 100%;
   background-size: contain;
 }
 
-.bonhomme2{
+.bonhomme2 {
   width: 35%;
   height: 100vh;
   background: no-repeat url(/public/Group26.png);
   background-position: 5%;
   position: absolute;
-  top:110%
+  top: 110%
 }
 
-.bonhomme3{
+.bonhomme3 {
   width: 30%;
   height: 100vh;
   background: no-repeat url(/public/Group20.png);
   background-position: 5%;
   position: absolute;
-  top:220%;
-  right:0%
+  top: 220%;
+  right: 0%
 }
 
 
-.Question{
+.Question {
   height: 80vh;
   width: 100%;
   display: flex;
@@ -171,80 +179,88 @@ h1, p{
   /* border: solid black; */
 }
 
-.Question > div{
+.Question>div {
   display: flex;
   align-items: center;
 }
 
-.Question:last-child{
+.Question:last-child {
   height: 10vh;
 }
 
-.Titre{
+.Titre {
   display: flex;
 }
 
-input, select {
-/* height: 3em; */
-border: 1px solid;
-border-color: #9776FF;
-border-radius: 5px ;
-background:rgba(0,0,0,0.0);
-width: 20vw;
-height: 5vh;
+input,
+select {
+  /* height: 3em; */
+  border: 1px solid;
+  border-color: #9776FF;
+  border-radius: 5px;
+  background: rgba(0, 0, 0, 0.0);
+  width: 20vw;
+  height: 5vh;
 }
 
-.radio{
+.radio {}
 
-}
-
-.age, .ville, .domaine, .activite{
-  font-size:larger;
+.age,
+.ville,
+.domaine,
+.activite {
+  font-size: larger;
   font-weight: 600;
 }
 
-.genre p{
-  font-size:larger;
+.genre p {
+  font-size: larger;
   font-weight: 600;
 }
 
-.Question:nth-child(1){
+.Question:nth-child(1) {
   background: no-repeat url(/public/Group26.png);
   /* background-position: 100%; */
 }
 
-.age, .genre, .ville, .domaine, .activite{
+.age,
+.genre,
+.ville,
+.domaine,
+.activite {
   display: flex;
   flex-direction: column;
 }
 
-.suivant{
+.suivant {
   padding: 1% 3%;
 }
 
 /* FORMULAIRE 2 ****************************************************/
 
 
-.personalite, .interets, .outils{
+.personalite,
+.interets,
+.outils {
   display: flex;
   flex-direction: column;
-  font-size:larger;
+  font-size: larger;
   font-weight: 600;
 }
 
-.espace{
-display: flex;
-justify-content: space-around;
+.espace {
+  display: flex;
+  justify-content: space-around;
 }
 
-.nom_categorie{
-  display:flex;
+.nom_categorie {
+  display: flex;
   justify-content: center;
 }
 
 /* FORMULAIRE_FINI ****************************************************/
 
-.Formulaire_fini{
+.Formulaire_fini {
   height: 80vh;
   display: flex;
   flex-direction: column;
@@ -253,30 +269,79 @@ justify-content: space-around;
   background-position: 10% 105%;
 }
 
-.elements{
+.elements {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
   padding: 10% 15%;
- 
+
 }
 
-.texte{
+.texte {
   text-align: center;
 }
 
-.lien{
+.lien {
   font-size: 1.2em;
   padding: 4%;
 }
 
-.ponctuation, .lien{
-color: #9776FF;
+.ponctuation,
+.lien {
+  color: #9776FF;
 }
 
-.dashboard{
+.dashboard {
   padding: 2% 3%;
+}
+
+
+/* PERSONA ****************************************************/
+
+.personalite,
+.textB,
+.interet,
+.Profil,
+.frustrations,
+.outils {
+
+  color: white;
+
+}
+
+.bouton {
+
+  width: 15rem;
+  font-size: 1, 5rem;
+  background-color: #DBF227;
+  padding: 2% 5%;
+  text-decoration: none;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.persona {
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: no-repeat url(/public/Group38.svg);
+  background-position: center;
+  padding: 5%;
+}
+
+.personalite {
+  display: flex;
+  flex-direction: column;
+}
+
+.gauche {
+  text-align: start;
+}
+
+.droite {
+  text-align: end;
 }
 
 /* FOOTER ***********************************************************/
@@ -288,12 +353,12 @@ footer {
   padding: 0 var(--sp_sm);
 }
 
-footer > img{
+footer>img {
   width: 4vh;
   /* padding: 2%; */
 }
 
-.social{
+.social {
   width: var(--sp_xxl);
   display: flex;
   justify-content: space-between;
@@ -304,20 +369,20 @@ footer > img{
 /* RESPONSIVE*********************************************/
 
 @media screen and (max-width: 700px) {
-  
-  .logo{
+
+  .logo {
     width: 35%;
   }
 
-  h1{
+  h1 {
     font-size: var(--fs_h2);
   }
 
-  .cta{
+  .cta {
     padding: 5% 3%;
   }
 
-  .bonhomme1{
+  .bonhomme1 {
     background-color: #9776FF;
   }
 
