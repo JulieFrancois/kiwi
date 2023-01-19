@@ -16,23 +16,13 @@ function App() {
   // JAVASCRIPT
   const[ModifPage,setModifPage] = React.useState("App"); 
   const[formdata,setformdata,] = React.useState();
-  const [DATABASE,setDATABASE] = React.useState([]);
 
   // const [Genre, setGenre] = React.useState("Femme");()
-
-  React.useEffect(()=>{
-    //  console.log(postData("https://illustrious-cat-7fb4d9.netlify.app/api/persona"))
-
-    axios
-      .get("https://illustrious-cat-7fb4d9.netlify.app/api/persona")
-      .then((response) => response)
-      .then((data) =>  setDATABASE(data.data))
-  },[])
 
   //JSX
   return (
       <>
-        <Header></Header>
+        <Header setModifPage={setModifPage}></Header>
         <section className="hero">
           {ModifPage === "App" && <Hero setModifPage={setModifPage}></Hero>}
         </section>
