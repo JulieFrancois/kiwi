@@ -173,10 +173,10 @@ p {
 
 
 .Question {
-  height: 80vh;
-  width: 100%;
+  height: 70vh;
+/*width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: center; */
   align-items: center;
   /* border: solid black; */
 }
@@ -205,7 +205,6 @@ select {
   height: 5vh;
 }
 
-.radio {}
 
 .age,
 .ville,
@@ -240,8 +239,19 @@ select {
 
 /* FORMULAIRE 2 ****************************************************/
 
+datalist {
+  display: flex;
+  color: var(--lilac);
+  justify-content: space-between;
+}
 
-.personalite,
+.personalite {
+  display: flex;
+  flex-direction: row;
+  font-size: larger;
+  font-weight: 600;
+}
+
 .interets,
 .outils {
   display: flex;
@@ -249,11 +259,11 @@ select {
   font-size: larger;
   font-weight: 600;
 }
-
+/* 
 .espace{
 display: flex;
 justify-content: space-between;
-}
+} */
 
 .nom_categorie {
   display: flex;
@@ -263,6 +273,19 @@ justify-content: space-between;
 input[type=range]{
   -webkit-appearance: none; 
   border: none;
+}
+
+input[type=range].custom-slider {
+  -webkit-appearance: none;     /*nécessaire pour Chrome */
+  padding: 0;                   /* nécessaire pour IE */
+  font: inherit;                /* même rendu suivant font document */
+  outline: none;
+  color: #069;                  /* sert pour couleur de référence, via currentColor, pour le curseur */
+  opacity: .8;
+  background: #CCC;             /* sert pour couleur de fond de la zone de déplacement */
+  box-sizing: border-box;       /* même modèle de boîte pour tous */
+  transition: opacity .2s;
+  cursor: pointer;
 }
 
 input[type=range].custom-slider.custom-slider-bullet {
@@ -282,24 +305,6 @@ input[type=range].custom-slider.custom-slider-bullet {
 } */
 
 input[type=range].custom-slider.custom-slider-bullet::-webkit-slider-thumb {
-  width: 2em;
-  padding: 0.25em;                                              /* largeur du bord */
-  border: 1px solid #888;
-  border-radius: 50%;
-  box-shadow: 0 0 .5em #FFF inset;
-  background: linear-gradient(#888, #FFF) content-box,          /* le centre */
-              linear-gradient(-90deg, #888, #DDD) border-box;   /* le bord */
-}
-input[type=range].custom-slider.custom-slider-bullet::-moz-range-thumb {
-  width: 2em;
-  padding: 0.25em;                                              /* largeur du bord */
-  border: 1px solid #888;
-  border-radius: 50%;
-  box-shadow: 0 0 .5em #FFF inset;
-  background: linear-gradient(#888, #FFF) content-box,          /* le centre */
-              linear-gradient(-90deg, #888, #DDD) border-box;   /* le bord */
-}
-input[type=range].custom-slider.custom-slider-bullet::-ms-thumb {
   width: 2em;
   padding: 0.25em;                                              /* largeur du bord */
   border: 1px solid #888;
@@ -351,11 +356,16 @@ input[type=range].custom-slider.custom-slider-bullet::-ms-thumb {
 
 /* PERSONA ****************************************************/
 
-.textB{
+/* .personalite,
+.textB,
+.interet,
+.Profil,
+.frustrations,
+.outils {
 
   color: white;
 
-}
+} */
 
 .personalite,
 .interet, .Profil, .frustrations, .outils {
@@ -383,11 +393,6 @@ input[type=range].custom-slider.custom-slider-bullet::-ms-thumb {
   background-size: 50vh;
   background-position: bottom center;
   padding: 5%;
-}
-
-.personalite {
-  display: flex;
-  flex-direction: column;
 }
 
 .gauche {

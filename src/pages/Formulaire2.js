@@ -19,26 +19,26 @@ function Formulaire2({setModifPage, setformdata}) {
       <h1 className='Titre'>Qu'aimes-tu ?</h1>
 
       <section className='Question'>
+      <h2>Comment te définirais-tu ?</h2>
+      <label className='nom_categorie'> Esprit</label>
         <label className='personalite'>
-          Comment te définirais-tu ?
-          <label className='nom_categorie'> Esprit</label>
-          <section className='espace'>
           <label for="Introvertie">Introvertie</label>
+          <section className='espace'>
           <input type="range" name="personalite" id="volume" min="0" max="11"  step="1" className='custom-slider custom-slider-bullet'/>
           <datalist>
-            <option value="1"></option>
-            <option value="2"></option>
-            <option value="3"></option>
-            <option value="4"></option>
-            <option value="5"></option>
-            <option value="6"></option>
-            <option value="7"></option>
-            <option value="8"></option>
-            <option value="9"></option>
-            <option value="10"></option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
           </datalist>
-          <label for="Extravertie">Extravertie</label>
           </section>
+          <label for="Extravertie">Extravertie</label>
         </label>
       </section>
 
