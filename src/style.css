@@ -156,7 +156,8 @@ p {
   background: no-repeat url(/public/Group26.png);
   background-position: 5%;
   position: absolute;
-  top: 110%
+  top:110%;
+  background-size: contain;
 }
 
 .bonhomme3 {
@@ -165,8 +166,9 @@ p {
   background: no-repeat url(/public/Group20.png);
   background-position: 5%;
   position: absolute;
-  top: 220%;
-  right: 0%
+  top:220%;
+  right:0%;
+  background-size: contain;
 }
 
 
@@ -248,15 +250,65 @@ select {
   font-weight: 600;
 }
 
-.espace {
-  display: flex;
-  justify-content: space-around;
+.espace{
+display: flex;
+justify-content: space-between;
 }
 
 .nom_categorie {
   display: flex;
   justify-content: center;
 }
+
+input[type=range]{
+  -webkit-appearance: none; 
+  border: none;
+}
+
+input[type=range].custom-slider.custom-slider-bullet {
+  height: 1.5em;
+  color: transparent;
+  background: transparent;
+  background-image: linear-gradient(to bottom, #180553, #180553, #180553);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 25%;
+}
+
+/* input[type=range].custom-slider.custom-slider-bullet::-webkit-slider-thumb {
+  width: 2em;
+  background-color: #180553;
+  height: 10px;
+} */
+
+input[type=range].custom-slider.custom-slider-bullet::-webkit-slider-thumb {
+  width: 2em;
+  padding: 0.25em;                                              /* largeur du bord */
+  border: 1px solid #888;
+  border-radius: 50%;
+  box-shadow: 0 0 .5em #FFF inset;
+  background: linear-gradient(#888, #FFF) content-box,          /* le centre */
+              linear-gradient(-90deg, #888, #DDD) border-box;   /* le bord */
+}
+input[type=range].custom-slider.custom-slider-bullet::-moz-range-thumb {
+  width: 2em;
+  padding: 0.25em;                                              /* largeur du bord */
+  border: 1px solid #888;
+  border-radius: 50%;
+  box-shadow: 0 0 .5em #FFF inset;
+  background: linear-gradient(#888, #FFF) content-box,          /* le centre */
+              linear-gradient(-90deg, #888, #DDD) border-box;   /* le bord */
+}
+input[type=range].custom-slider.custom-slider-bullet::-ms-thumb {
+  width: 2em;
+  padding: 0.25em;                                              /* largeur du bord */
+  border: 1px solid #888;
+  border-radius: 50%;
+  box-shadow: 0 0 .5em #FFF inset;
+  background: linear-gradient(#888, #FFF) content-box,          /* le centre */
+              linear-gradient(-90deg, #888, #DDD) border-box;   /* le bord */
+}
+
 
 /* FORMULAIRE_FINI ****************************************************/
 
@@ -382,11 +434,28 @@ footer>img {
     padding: 5% 3%;
   }
 
-  .bonhomme1 {
-    background-color: #9776FF;
+  .bonhomme1{
+    /* background-color: #9776FF; */
+    width: 100%;
+    height: 60vh;
+    position:initial;
+  }
+
+  .hero{
+    height: 120%;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    text-align: center;
+    left: 0;
+    /* padding: 0 10%; */
   }
 
   /* body{
     background-color: #180553;
   } */
+
+  .Question{
+    height: 60vh;
+  }
 }

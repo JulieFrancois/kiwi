@@ -20,11 +20,11 @@ function Formulaire2({setModifPage, setformdata}) {
 
       <section className='Question'>
         <label className='personalite'>
-          <h2> Comment te définirais-tu ? </h2>
-          <label className='nom_categorie'> Esprit </label>
+          Comment te définirais-tu ?
+          <label className='nom_categorie'> Esprit</label>
           <section className='espace'>
           <label for="Introvertie">Introvertie</label>
-          <input type="range" name="personalite" id="volume" min="0" max="11"  step="1"/>
+          <input type="range" name="personalite" id="volume" min="0" max="11"  step="1" className='custom-slider custom-slider-bullet'/>
           <datalist>
             <option value="1"></option>
             <option value="2"></option>
@@ -47,7 +47,7 @@ function Formulaire2({setModifPage, setformdata}) {
           À quel point aimes-tu ça ? 
           <label className='nom_categorie'> Musique pop </label>
           <section className='espace'></section>
-          <input type="range" name="interets" id="volume" min="0" max="11"  step="1" list="tickmarks"/>
+          <input type="range" name="interets" id="volume" min="0" max="11"  step="1" list="tickmarks" className='custom-slider custom-slider-bullet'/>
             <datalist id="tickmarks">
               <option value="1"></option>
               <option value="2"></option>
@@ -67,10 +67,10 @@ function Formulaire2({setModifPage, setformdata}) {
           <label className='outils'>
             Quels outils utilisent-tu souvent ?
             <select name="outils">
-              <option value="word">word</option>
+              <option value="word">Word</option>
               <option value="photoshop">Photoshop</option>
-              <option selected value="excel">excel</option>
-              <option value="docs">docs</option>
+              <option selected value="excel">Excel</option>
+              <option value="docs">Docs</option>
             </select>
           </label>
         </section>
