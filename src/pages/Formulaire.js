@@ -21,7 +21,7 @@ const [FormRef,handleSubmit,resetForm] = useForm((data)=>
       <section className='Question'>
         <label  className="age" >
           Quel âge as-tu ? 
-          <input type="number" name="age"/>
+          <input type="number" name="age" placeholder="23"/>
         </label>
         </section>
         <section className='Question'>
@@ -52,7 +52,7 @@ const [FormRef,handleSubmit,resetForm] = useForm((data)=>
 
         <label className="ville">
           Dans quelle ville habites-tu ?
-          <input type="text" name="ville" /> 
+          <input type="text" name="ville" placeholder="Paris, Marseille, Massy..."/> 
         </label>
         </section>
 

@@ -17,16 +17,6 @@ function App() {
   const[ModifPage,setModifPage] = React.useState("App"); 
   const[formdata,setformdata,] = React.useState();
 
-  // React.useEffect(()=>{
-
-  //   axios.post("https://illustrious-cat-7fb4d9.netlify.app/api/persona", { age: 22, gender: "Homme", city: "Paris", activity: ["Graphiste"], mbti: 9 }, { headers: { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*' }, withCredentials: true })
-  //   .then((response) => response)
-  //   .then((data) => {
-  //       console.log(data)
-  //   });
-
-  // },[])
-
   // const [Genre, setGenre] = React.useState("Femme");()
 
   //JSX

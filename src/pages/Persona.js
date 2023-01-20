@@ -9,10 +9,35 @@ function Persona({setModifPage, setformdata}) {
     {setModifPage("Persona");setformdata(data)// Write your submit function here
   })
 
+//   const [DOMAIN] = "https://illustrious-cat-7fb4d9.netlify.app/api/persona"
   const [DATABASE,setDATABASE] = React.useState([]);
   const [Age,setAge] = React.useState(0);
   const [Gender,setGender] = React.useState(0);
   const [City, setCity] = React.useState(0);
+
+  function Postage(){
+    axios
+      .post("https://illustrious-cat-7fb4d9.netlify.app/api/persona",{
+        age:31,
+        gender:"Homme",
+        city:"Nanterre",
+        activity:"Droit",
+        spirit:91,
+        energy:8,
+        nature:32,
+        tactic:98,
+        interest:["Cinéma","Cuisine","Voyages"],
+        frustrations:"Pas assez d’organisation",
+        tools:"Suite Office"
+      },
+      {headers: {
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*',
+      'Access-Control-Allow-Methods':'GET,PUT,POST,DELETE,PATCH,OPTIONS',
+      'Access-Control-Allow-Headers':'*'}})
+      .then((response) => response)
+      .then((data) => {console.log(data)})
+  }
   
   React.useEffect(()=>{
 
@@ -26,7 +51,7 @@ function Persona({setModifPage, setformdata}) {
     let Total = 0
     let Homme = 0
     let Femme = 0
-    let City = 0
+    let City = []
 
     data.data.forEach(element => {
         //AGE
@@ -45,10 +70,11 @@ function Persona({setModifPage, setformdata}) {
         Femme = Femme+1
 
         //VILLE
-        City = element.city
+        City.push(element.city)
+        
 
     });
-    setAge(Total/NombreTotal)
+    setAge(Math.round(Total/NombreTotal))
     if(Homme > Femme) 
     setGender("Homme")
     if(Femme > Homme) 
@@ -58,6 +84,8 @@ function Persona({setModifPage, setformdata}) {
       } else {
         setGender(Homme > Femme ? "Homme" : "Femme")
       }
+    const randomIndex = Math.floor(Math.random() * City.length);
+    setCity(City[randomIndex]);
     })
   },[])
 
@@ -78,7 +106,7 @@ function Persona({setModifPage, setformdata}) {
         <p>tactique</p> --> */}
 
         <label for="esprit" className="textB">Esprit</label>
-        <input type="range" name="personaliteR" id="volume" min="0" max="11" step="1" />
+        <input type="range" name="personaliteR" id="volume" min="0" max="100" step="1" />
         <datalist>
             <option value="1"></option>
             <option value="2"></option>
@@ -139,8 +167,8 @@ function Persona({setModifPage, setformdata}) {
 
     </div>
 
-    <div className="interet">
-        <h1 className='textB'>Centres d'intérêts</h1>
+    <div className="interetB">
+        <h1 className='textB'>Centres d'intérêt</h1>
 
         <p className="textB">Cuisine</p>
         <p className="textB">Cinéma</p>
@@ -148,23 +176,23 @@ function Persona({setModifPage, setformdata}) {
 
     </div>
 
-    <a href="#" title="" className="bouton">Télécharger</a>
+    <a href="#" title="" className="boutonB">Télécharger</a>
 
 </div>
 
 <div className="droite">
 
-    <div className="profil">
+    <div className="profilB">
         <h1 className='textB'>Profil</h1>
 
         <p className="textB">{Age} ans</p>
         <p className="textB">{Gender}</p>
-        <p className="textB">Région parisienne</p>
+        <p className="textB">{City}</p>
         <p className="textB">Metiers du web</p>
 
     </div>
 
-    <div className="frustrations">
+    <div className="frustrationsB">
         <h1 className='textB'>Frustations</h1>
 
         <p className="textB">Manque de temps</p>
@@ -172,9 +200,10 @@ function Persona({setModifPage, setformdata}) {
 
     </div>
 
-    <div className="outils">
+    <div className="outilsB">
         <h1 className="textB">Outils</h1>
 
+        <p onClick={() => Postage()} className="textB">Réseaux sociaux</p>
         <p className="textB">Réseaux sociaux</p>
         <p className="textB">Web</p>
 
