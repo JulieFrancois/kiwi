@@ -67,10 +67,9 @@ function Formulaire2({setModifPage, setformdata}) {
           <label className='outils'>
             Quels outils utilisent-tu souvent ?
             <select name="outils">
-              <option value="word">Word</option>
-              <option value="photoshop">Photoshop</option>
-              <option selected value="excel">Excel</option>
-              <option value="docs">Docs</option>
+              <option value="Suite Adobe">Suite Adobe</option>
+              <option selected value="Suite Office">Suite Office</option>
+              <option value="Google Drive">Google Drive</option>
             </select>
           </label>
         </section>

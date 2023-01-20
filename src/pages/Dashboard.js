@@ -63,7 +63,8 @@ return(
         </div>
         
         </div>
-
+    </div> 
+    
         <div class="Page">
             <div class="Box-elements">
                 <div class="box-element-flex">
@@ -84,7 +85,7 @@ return(
                 </div>
             </div>  
         </div> 
-    </div> 
+    
     )
   }
 
