@@ -97,16 +97,43 @@ function Persona({setModifPage, setformdata}) {
     <section className="persona">
 
 <div className="gauche">
-    <div className="personaliteR">
-        <h1 className='textB'>Personnalité</h1>
+    <div className="personalite">
+        {/* <h1 className='textB'>Personnalité</h1> */}
 
         {/* <!-- <p>Esprit</p> -->
         <!-- <p>Energie</p> -->
         <!-- <p>Nature</p>
         <p>tactique</p> --> */}
 
-        <label for="esprit" className="textB">Esprit</label>
-        <input type="range" name="personaliteR" id="volume" min="0" max="100" step="1" />
+<h1 className="textB">Personnalité</h1>
+ <div className="container">
+    
+     <p className="textB">Esprit</p>
+     <div className="progressbar-wrapper">
+      <div title="downloaded" class="progressbar mp4">{Spirit}</div>
+     </div>
+
+     <p className="textB">Energie</p>
+     <div className="progressbar-wrapper">
+      <div title="downloading" class="progressbar mp3">{Energy}</div>
+     </div>
+
+     <p className="textB">Nature</p>
+     <div clasNames="progressbar-wrapper">
+      <div title="downloading" class="progressbar mp3">{Nature}</div>
+     </div>
+
+     <p className="textB">Tactique</p>
+     <div className="progressbar-wrapper">
+      <div title="downloading" class="progressbar mp3">{Tactic}</div>
+     </div>
+     
+
+
+</div>
+
+        {/* <label for="esprit" className="textB">Esprit</label>
+        <input type="range" name="personalite" id="volume" min="0" max="100" step="1"  className="slider_result"/>
         <datalist>
             <option value="1"></option>
             <option value="2"></option>
@@ -121,7 +148,7 @@ function Persona({setModifPage, setformdata}) {
         </datalist>
 
         <label for="Extravertie" className="textB">Energie</label>
-        <input type="range" name="personaliteR" id="volume" min="0" max="11" step="1" />
+        <input type="range" name="personalite" id="volume" min="0" max="11" step="1" className="slider_result"/>
         <datalist>
             <option value="1"></option>
             <option value="2"></option>
@@ -136,7 +163,7 @@ function Persona({setModifPage, setformdata}) {
         </datalist>
 
         <label for="Extravertie" className="textB">Nature</label>
-        <input type="range" name="personaliteR" id="volume" min="0" max="11" step="1" />
+        <input type="range" name="personalite" id="volume" min="0" max="11" step="1" className="slider_result"/>
         <datalist>
             <option value="1"></option>
             <option value="2"></option>
@@ -151,7 +178,7 @@ function Persona({setModifPage, setformdata}) {
         </datalist>
 
         <label for="Extravertie" className="textB">Tactique</label>
-        <input type="range" name="personaliteR" id="volume" min="0" max="11" step="1" />
+        <input type="range" name="personalite" id="volume" min="0" max="11" step="1" className="slider_result"/>
         <datalist>
             <option value="1"></option>
             <option value="2"></option>
@@ -163,7 +190,7 @@ function Persona({setModifPage, setformdata}) {
             <option value="8"></option>
             <option value="9"></option>
             <option value="10"></option>
-        </datalist>
+        </datalist> */}
 
     </div>
 
