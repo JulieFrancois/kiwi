@@ -371,15 +371,15 @@ input[type=range].custom-slider.custom-slider-bullet::-webkit-slider-thumb {
 
 }  */
 
-.interet,
-.Profil,
-.frustrations,
-.outils {
+.interetB,
+.ProfilB,
+.frustrationsB,
+.outilsB {
 
   margin: 10% 0 5% 0;
 }
 
-.bouton {
+.boutonB {
 
   background-color: #DBF227;
   width: var(--sp_xxl);
