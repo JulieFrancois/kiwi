@@ -21,10 +21,9 @@ function Persona({setModifPage, setformdata}) {
   const [Nature, setNature] = React.useState(0);
   const [Tactic, setTactic] = React.useState(0);
   const [Interest, setInterest] = React.useState([]);
+  const [Frustations, setFrustrations] = React.useState([]);
+  const [Tools, setTools] = React.useState([]);
   
-
-//   const [Frustations, setFrustrations] = React.useState(0);
-//   const [Tools, setTools] = React.useState(0);
 
 //   function Postage(){
 //     axios
@@ -74,9 +73,9 @@ function Persona({setModifPage, setformdata}) {
     let Nature = 0
     let Tactic = 0
 
-    // let Interest = []
-    let Frustations = []
-    let Tools = []
+    let Interest = {}
+    let Frustations = {}
+    let Tools = {}
 
     data.data.forEach(element => {
 
@@ -110,21 +109,39 @@ function Persona({setModifPage, setformdata}) {
         Tactic = Tactic+element.tactic
 
         //OTHERS //////////////////////////////////////////////////////////////
-        let Interest = {}
+
+        //INTERÊT
         element.interest.forEach(value => {
             Interest[value] = Interest[value] ? Interest[value] + 1 : 1;
         });
         
-        // convert the object into an array of key-value pairs
         const entries = Object.entries(Interest);
-
-        // sort the array by the count in descending order
         entries.sort((a, b) => b[1] - a[1]);
-        
-        // extract the first three elements of the array
         const topThreeValues = entries.slice(0, 3);
-        // display the top three values and their count
         setInterest(topThreeValues)
+
+        //FRUSTRATIONS
+        element.frustrations.forEach(value => {
+            Frustations[value] = Frustations[value] ? Frustations[value] + 1 : 1;
+        });
+        
+        const entries2 = Object.entries(Frustations);
+        entries2.sort((a, b) => b[1] - a[1]);
+        const topTwoValues = entries2.slice(0, 2);
+        setFrustrations(topTwoValues)
+   
+
+        //OUTILS
+        element.tools.forEach(value => {
+            if(value)
+            Tools[value] = Tools[value] ? Tools[value] + 1 : 1;
+        });
+        
+        const entries3 = Object.entries(Tools);
+        entries3.sort((a, b) => b[1] - a[1]);
+        const topTwo2Values = entries3.slice(0, 2);
+        setTools(topTwo2Values)
+
     });
 
     setAge(Math.round(Total/NombreTotal))
@@ -138,10 +155,21 @@ function Persona({setModifPage, setformdata}) {
         setGender("Femme")
         const randomIndexGender2 = Math.floor(Math.random() * FemaleFirstNames.length)
         setFirstName(FemaleFirstNames[randomIndexGender2]);
-        console.log(randomIndexGender2,FemaleFirstNames)
     }
     if(Homme === Femme){
-        setGender(Math.random() < 0.5 ? "Homme" : "Femme") 
+        let Ylona = Math.random()
+        if(Ylona < 0.5){ 
+            setGender("Homme")
+            const randomIndexGender = Math.floor(Math.random() * MaleFirstNames.length);
+            setFirstName(MaleFirstNames[randomIndexGender]);
+        }
+        if(Ylona > 0.5){
+            setGender("Femme")
+            const randomIndexGender2 = Math.floor(Math.random() * FemaleFirstNames.length)
+            setFirstName(FemaleFirstNames[randomIndexGender2]);
+        }
+        setGender(Ylona < 0.5 ? "Homme" : "Femme")
+         
       } else {
         setGender(Homme > Femme ? "Homme" : "Femme")
       }
@@ -176,11 +204,43 @@ function Persona({setModifPage, setformdata}) {
     <section className="persona">
 
 <div className="gauche">
-    <div className="personaliteR">
-        <h1 className='textB'>Personnalité</h1>
+    <div className="personalite">
+        {/* <h1 className='textB'>Personnalité</h1> */}
 
-        <label for="esprit" className="textB">Esprit</label>
-        <input type="range" name="personaliteR" id="volume" min="0" max="100" step="1" value={Spirit}/>
+        {/* <!-- <p>Esprit</p> -->
+        <!-- <p>Energie</p> -->
+        <!-- <p>Nature</p>
+        <p>tactique</p> --> */}
+
+<h1 className="textB">Personnalité</h1>
+ <div className="container">
+    
+     <p className="textB">Esprit</p>
+     <div className="progressbar-wrapper">
+      <div title="downloaded" class="progressbar mp4">{Spirit}</div>
+     </div>
+
+     <p className="textB">Energie</p>
+     <div className="progressbar-wrapper">
+      <div title="downloading" class="progressbar mp3">{Energy}</div>
+     </div>
+
+     <p className="textB">Nature</p>
+     <div clasNames="progressbar-wrapper">
+      <div title="downloading" class="progressbar mp3">{Nature}</div>
+     </div>
+
+     <p className="textB">Tactique</p>
+     <div className="progressbar-wrapper">
+      <div title="downloading" class="progressbar mp3">{Tactic}</div>
+     </div>
+     
+
+
+</div>
+
+        {/* <label for="esprit" className="textB">Esprit</label>
+        <input type="range" name="personalite" id="volume" min="0" max="100" step="1"  className="slider_result"/>
         <datalist>
             <option value="10"></option>
             <option value="20"></option>
@@ -195,7 +255,7 @@ function Persona({setModifPage, setformdata}) {
         </datalist>
 
         <label for="Extravertie" className="textB">Energie</label>
-        <input type="range" name="personaliteR" id="volume" min="0" max="100" step="1" value={Energy} />
+        <input type="range" name="personalite" id="volume" min="0" max="11" step="1" className="slider_result"/>
         <datalist>
             <option value="1"></option>
             <option value="2"></option>
@@ -210,7 +270,7 @@ function Persona({setModifPage, setformdata}) {
         </datalist>
 
         <label for="Extravertie" className="textB">Nature</label>
-        <input type="range" name="personaliteR" id="volume" min="0" max="100" step="1" value={Nature}/>
+        <input type="range" name="personalite" id="volume" min="0" max="11" step="1" className="slider_result"/>
         <datalist>
             <option value="1"></option>
             <option value="2"></option>
@@ -225,7 +285,7 @@ function Persona({setModifPage, setformdata}) {
         </datalist>
 
         <label for="Extravertie" className="textB">Tactique</label>
-        <input type="range" name="personaliteR" id="volume" min="0" max="100" step="1" value={Tactic}/>
+        <input type="range" name="personalite" id="volume" min="0" max="11" step="1" className="slider_result"/>
         <datalist>
             <option value="1"></option>
             <option value="2"></option>
@@ -237,7 +297,7 @@ function Persona({setModifPage, setformdata}) {
             <option value="8"></option>
             <option value="9"></option>
             <option value="10"></option>
-        </datalist>
+        </datalist> */}
 
     </div>
 
@@ -272,16 +332,22 @@ function Persona({setModifPage, setformdata}) {
     <div className="frustrationsB">
         <h1 className='textB'>Frustations</h1>
 
-        <p className="textB">Manque de temps</p>
-        <p className="textB">Pas assez d'organisation</p>
+        {
+        Frustations.map((value,i)=>{
+        return <p className='textB' key={i}>{value[0]}</p>
+        })
+        }
 
     </div>
 
     <div className="outilsB">
         <h1 className="textB">Outils</h1>
 
-        <p className="textB">Réseaux sociaux</p>
-        <p className="textB">Web</p>
+        {
+        Tools.map((value,i)=>{
+        return <p className='textB' key={i}>{value[0]}</p>
+        })
+        }
 
     </div>
 

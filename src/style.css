@@ -180,6 +180,7 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   /* border: solid black; */
 }
 
@@ -305,7 +306,7 @@ input[type=range].custom-slider.custom-slider-bullet {
   color: transparent;
   background: transparent;
   background-image: linear-gradient(to bottom, #180553, #180553, #180553);
-  background-position: center;
+  /* background-position: center; */
   background-repeat: no-repeat;
   background-size: 100% 25%;
 }
@@ -468,6 +469,50 @@ div.title-menu { color: white; font-size: 14px; animation-name: Font-Menu; }
   color: white;
 
 } 
+
+
+:root {
+  --success: #00b894;
+  --progress: #e17055;
+}
+
+.progressbar-wrapper {
+  background-color: #dfe6e9;
+  color: white;
+  border-radius: 15px;
+  width: 100%;
+}
+
+.progressbar {
+  background-color: var(--progress);
+  color: white;
+  padding: 1rem;
+  text-align: right;
+  font-size: 20px;
+  border-radius: 15px;
+}
+
+.progressbar[title="downloading"] {
+   background-color: var(--progress);
+}
+
+.progressbar[title="downloaded"] {
+   background-color: var(--success);
+}
+  
+.mp4 {
+  width: 100%;
+}
+
+.mp3 {
+  width: 60%;
+}
+/* .slider_result {
+  height: 1em;
+  margin-left: 5%;
+  background-image: linear-gradient(to right, #906dfa, #8c69f6, #c7b0fa);
+  width: 30vh;
+} */
 
 .interetB,
 .ProfilB,
