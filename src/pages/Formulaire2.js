@@ -22,7 +22,7 @@ function Formulaire2({setModifPage, setformdata}) {
       <h2>Comment te définirais-tu ?</h2>
       <label className='nom_categorie'> Esprit</label>
         <label className='personalite'>
-          <label for="Introvertie">Introvertie</label>
+          <label htmlFor="Introvertie">Introvertie</label>
           <section className='espace'>
           <input type="range" name="personalite" id="volume" min="1" max="10"  step="1" className='custom-slider custom-slider-bullet'/>
           <datalist>
@@ -38,7 +38,7 @@ function Formulaire2({setModifPage, setformdata}) {
             <option value="10">10</option>
           </datalist>
           </section>
-          <label for="Extravertie">Extravertie</label>
+          <label htmlFor="Extravertie">Extravertie</label>
         </label>
       </section>
 

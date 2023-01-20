@@ -57,7 +57,10 @@ header {
   align-items: center;
   justify-content: space-between;
   padding: 0 var(--sp_sm);
+}
 
+header.Persona{
+  background-color: var(--dark_blue);
 }
 
 a > .logo {
@@ -512,6 +515,10 @@ footer {
   justify-content: space-between;
   height: 10vh;
   padding: 0 var(--sp_sm);
+}
+
+footer.Persona{
+  background-color: var(--dark_blue);
 }
 
 footer>img {
