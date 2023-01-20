@@ -226,6 +226,18 @@ function Formulaire2({setModifPage, setformdata}) {
 
         <section className='Question'>
           <label className='outils'>
+          Quels sont les problèmes que tu rencontres ?            
+          <select name="outils">
+              <option value="Pas assez d’organisation">Pas assez d’organisation</option>
+              <option selected value="Manque de temps">Manque de temps</option>
+              <option value="Pas assez de connaissance">Pas assez de connaissance</option>
+              <option selected value="Habite loin">Habite loin</option>
+            </select>
+          </label>
+        </section>
+
+        <section className='Question'>
+          <label className='outils'>
             Quels outils utilisent-tu souvent ?
             <select name="outils">
               <option value="Suite Adobe">Suite Adobe</option>
