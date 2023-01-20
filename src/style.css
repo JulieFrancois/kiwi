@@ -199,7 +199,7 @@ select {
   border: 1px solid;
   border-color: #9776FF;
   border-radius: 5px;
-  background: rgba(0, 0, 0, 0.0);
+  /* background: rgba(0, 0, 0, 0.0); */
   width: 20vw;
   height: 5vh;
 }
@@ -407,7 +407,14 @@ input[type=range].custom-slider.custom-slider-bullet::-webkit-slider-thumb {
 .chart-box { border-radius: 19px; margin-right: 6%; width: 118%; position: relative; }
 .box-element-flex { display: flex; margin-top: 20px; }
 
-.Page { position: absolute; background-color: #180553; height: 100%; width: 82%; left: 100%; border-radius: 60px 0px 0px 60px; overflow: overlay; }
+.Page { 
+  position: absolute; 
+  background-color: #180553; 
+  height: 90vh; 
+  width: 82%; 
+  right: 0px; 
+  border-radius: 60px 0px 0px 60px; 
+  overflow: overlay; }
 
 .icon-menu { width: 17px; height: 17px; fill: white; margin-right: 16px; animation-name: Icon-Menu; }
 
@@ -451,11 +458,11 @@ div.title-menu { color: white; font-size: 14px; animation-name: Font-Menu; }
 
 /* PERSONA ****************************************************/
 
-/* .textB {
+.textB {
 
   color: white;
 
-}  */
+} 
 
 .interetB,
 .ProfilB,
@@ -477,7 +484,7 @@ div.title-menu { color: white; font-size: 14px; animation-name: Font-Menu; }
 }
 
 .persona {
-  /* height: 80vh; */
+  height: 80vh;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -485,6 +492,7 @@ div.title-menu { color: white; font-size: 14px; animation-name: Font-Menu; }
   background-size: 50vh;
   background-position: bottom center;
   padding: 0 8% 0 8%;
+  background-color: var(--dark_blue);
 }
 
 .gauche {
