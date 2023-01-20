@@ -41,22 +41,13 @@
 body {
   background-color: whitesmoke;
   background: no-repeat url(/public/Vector10.svg);
-  background-position: -30% 105%;
+  background-position: -50% 105%;
 }
 
 main {
   width: 98%;
   margin: auto;
 }
-
-/* FONT ***********************************************************/
-
-/* @font-face {
-	font-family: 'Raleway';
-	src: url(‘/public/Raleway/Raleway-Bold.ttf’) format(‘ttf’),
-		url(‘/public/Raleway/Raleway-Regular.ttf’) format(‘ttf’)
-
-} */
 
 /* HEADER ***********************************************************/
 
@@ -69,12 +60,19 @@ header {
 
 }
 
-.logo {
-  width: 15%;
+a > .logo {
+  width: 65%;
 }
 
-nav>img {
-  width: 25px;
+nav{
+  width: 10%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+a > img {
+  width: 80%;
 }
 
 /* HERO ************************************************************/
@@ -175,9 +173,9 @@ p {
 
 .Question {
   height: 70vh;
-  /*width: 100%;
+  width: 50%;
   display: flex;
-  justify-content: center; */
+  justify-content: center;
   align-items: center;
   /* border: solid black; */
 }
@@ -440,9 +438,19 @@ footer>img {
 
 @media screen and (max-width: 700px) {
 
-  .logo {
-    width: 35%;
+  a > .logo {
+    width: 55%;
   }
+
+  nav{
+    width: 40%;
+    justify-content: flex-end;
+  }
+  
+  a > img {
+    width: 70%;
+  }
+  
 
   h1 {
     font-size: var(--fs_h2);
