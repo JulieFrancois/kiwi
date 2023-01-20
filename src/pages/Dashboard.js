@@ -3,6 +3,7 @@ import Footer from '../components/Footer';
 
 function Dashboard ({setModifPage}) {
 return(
+    <>
     <div class="Side-bar">
 
         <div class="Box-menu">
@@ -64,27 +65,29 @@ return(
         
         </div>
 
+        
+    </div> 
+        </div> 
         <div class="Page">
-            <div class="Box-elements">
-                <div class="box-element-flex">
-                    <div class="chart-box">
-                    <div class="title-element">Persona</div>
-                    <div class="chart-box-main">
-                        <div class="text_box">
-                            <h1> Formulaire 1 </h1>
-                            <p>Description du formulaire en une ou 2 lignes </p>
-                            <p>Nombres de questions : 20</p>
-                            <p>Nombres de réponses : 12</p>
-                            <p>Lien : https://www.pinterest.fr/ </p>
-                            <button> Voir mon persona </button>
-                        </div>
-                    </div>
-                    </div>
+        <div class="Box-elements">
+            <div class="box-element-flex">
+                <div class="chart-box">
+                <div class="title-element">Persona</div>
+                <div class="chart-box-main">
+                    <div class="text_box">
+                        <h1> Formulaire 1 </h1>
+                        <p>Description du formulaire en une ou 2 lignes </p>
+                        <p>Nombres de questions : 20</p>
+                        <p>Nombres de réponses : 12</p>
+                        <p>Lien : https://www.pinterest.fr/ </p>
+                        <button> Voir mon persona </button>
                     </div>
                 </div>
-            </div>  
-        </div> 
-    </div> 
+                </div>
+                </div>
+            </div>
+        </div>   
+    </>
     )
   }
 
