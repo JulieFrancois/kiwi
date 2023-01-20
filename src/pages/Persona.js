@@ -229,7 +229,7 @@ function Persona({setModifPage, setformdata}) {
 
     </div>
 
-    <div className="interet">
+    <div className="interetB">
         <h1 className='textB'>Centres d'intérêt</h1>
 
         {
@@ -244,13 +244,13 @@ function Persona({setModifPage, setformdata}) {
 
     </div>
 
-    <a href="#" title="" className="bouton">Télécharger</a>
+    <a href="#" title="" className="boutonB">Télécharger</a>
 
 </div>
 
 <div className="droite">
 
-    <div className="profil">
+    <div className="profilB">
         <h1 className='textB'>Profil</h1>
 
         <p className="textB">{Age} ans</p>
@@ -260,7 +260,7 @@ function Persona({setModifPage, setformdata}) {
 
     </div>
 
-    <div className="frustrations">
+    <div className="frustrationsB">
         <h1 className='textB'>Frustations</h1>
 
         <p className="textB">Manque de temps</p>
@@ -268,7 +268,7 @@ function Persona({setModifPage, setformdata}) {
 
     </div>
 
-    <div className="outils">
+    <div className="outilsB">
         <h1 className="textB">Outils</h1>
 
         {/* <p onClick={() => Postage()} className="textB">Réseaux sociaux</p> */}
