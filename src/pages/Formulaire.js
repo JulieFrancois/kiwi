@@ -21,7 +21,7 @@ const [FormRef,handleSubmit,resetForm] = useForm((data)=>
       <section className='Question'>
         <label  className="age" >
           Quel âge as-tu ? 
-          <input type="number" name="age" placeholder="23"/>
+          <input type="number" name="age" placeholder=" Ex : 23"/>
         </label>
         </section>
         <section className='Question'>
@@ -36,15 +36,6 @@ const [FormRef,handleSubmit,resetForm] = useForm((data)=>
                 <label for="Homme">Homme</label>
             </div>
 
-            <div>
-                <input type="radio" className="radio" name="genre" value="Autre"/>
-                <label for="Autre">Autre</label>
-            </div>
-
-            <div>
-                <input type="radio" className="radio" name="genre" value="Je ne souhaite pas préciser"/>
-                <label for="Je ne souhaite pas préciser">Je ne souhaite pas préciser</label>
-            </div>
             </label>
          </section>
 
@@ -60,10 +51,12 @@ const [FormRef,handleSubmit,resetForm] = useForm((data)=>
         <label className="activite">
         Quel est ton domaine d'activité ?
         <select name="domaine">
+        <option selected value="Développement web">Développement web</option>
+        <option value="Graphisme">Graphisme</option>
         <option value="Art">Art</option>
+        <option value="Commerce">Commerce</option>
+        <option value="Relation client">Relation client</option>
         <option value="Droit">Droit</option>
-        <option selected value="Politique">Politique</option>
-        <option value="Vente">Vente</option>
         </select>
 
         </label>
