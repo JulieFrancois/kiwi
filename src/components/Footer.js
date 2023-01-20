@@ -4,7 +4,7 @@ function Footer () {
     return (
         <footer>
             <img src="/P..svg"/>
-            <ul class="social">
+            <ul className="social">
                 <li><a href="" title=""><img src="/socialmedia/Mail.png"/></a></li>
                 <li><a href="" title=""><img src="/socialmedia/Facebook.png"/></a></li>
                 <li><a href="" title=""><img src="/socialmedia/Linkedin.png"/></a></li>

@@ -22,7 +22,7 @@ function App() {
   //JSX
   return (
       <>
-        <Header setModifPage={setModifPage}></Header>
+        <Header ModifPage={ModifPage} setModifPage={setModifPage}></Header>
         <section className="hero">
           {ModifPage === "App" && <Hero setModifPage={setModifPage}></Hero>}
         </section>
