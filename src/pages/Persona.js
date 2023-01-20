@@ -21,10 +21,9 @@ function Persona({setModifPage, setformdata}) {
   const [Nature, setNature] = React.useState(0);
   const [Tactic, setTactic] = React.useState(0);
   const [Interest, setInterest] = React.useState([]);
+  const [Frustations, setFrustrations] = React.useState([]);
+  const [Tools, setTools] = React.useState([]);
   
-
-//   const [Frustations, setFrustrations] = React.useState(0);
-//   const [Tools, setTools] = React.useState(0);
 
 //   function Postage(){
 //     axios
@@ -74,9 +73,9 @@ function Persona({setModifPage, setformdata}) {
     let Nature = 0
     let Tactic = 0
 
-    // let Interest = []
-    let Frustations = []
-    let Tools = []
+    let Interest = {}
+    let Frustations = {}
+    let Tools = {}
 
     data.data.forEach(element => {
 
@@ -110,21 +109,39 @@ function Persona({setModifPage, setformdata}) {
         Tactic = Tactic+element.tactic
 
         //OTHERS //////////////////////////////////////////////////////////////
-        let Interest = {}
+
+        //INTERÊT
         element.interest.forEach(value => {
             Interest[value] = Interest[value] ? Interest[value] + 1 : 1;
         });
         
-        // convert the object into an array of key-value pairs
         const entries = Object.entries(Interest);
-
-        // sort the array by the count in descending order
         entries.sort((a, b) => b[1] - a[1]);
-        
-        // extract the first three elements of the array
         const topThreeValues = entries.slice(0, 3);
-        // display the top three values and their count
         setInterest(topThreeValues)
+
+        //FRUSTRATIONS
+        element.frustrations.forEach(value => {
+            Frustations[value] = Frustations[value] ? Frustations[value] + 1 : 1;
+        });
+        
+        const entries2 = Object.entries(Frustations);
+        entries2.sort((a, b) => b[1] - a[1]);
+        const topTwoValues = entries2.slice(0, 2);
+        setFrustrations(topTwoValues)
+   
+
+        //OUTILS
+        element.tools.forEach(value => {
+            if(value)
+            Tools[value] = Tools[value] ? Tools[value] + 1 : 1;
+        });
+        
+        const entries3 = Object.entries(Tools);
+        entries3.sort((a, b) => b[1] - a[1]);
+        const topTwo2Values = entries3.slice(0, 2);
+        setTools(topTwo2Values)
+
     });
 
     setAge(Math.round(Total/NombreTotal))
@@ -138,10 +155,21 @@ function Persona({setModifPage, setformdata}) {
         setGender("Femme")
         const randomIndexGender2 = Math.floor(Math.random() * FemaleFirstNames.length)
         setFirstName(FemaleFirstNames[randomIndexGender2]);
-        console.log(randomIndexGender2,FemaleFirstNames)
     }
     if(Homme === Femme){
-        setGender(Math.random() < 0.5 ? "Homme" : "Femme") 
+        let Ylona = Math.random()
+        if(Ylona < 0.5){ 
+            setGender("Homme")
+            const randomIndexGender = Math.floor(Math.random() * MaleFirstNames.length);
+            setFirstName(MaleFirstNames[randomIndexGender]);
+        }
+        if(Ylona > 0.5){
+            setGender("Femme")
+            const randomIndexGender2 = Math.floor(Math.random() * FemaleFirstNames.length)
+            setFirstName(FemaleFirstNames[randomIndexGender2]);
+        }
+        setGender(Ylona < 0.5 ? "Homme" : "Femme")
+         
       } else {
         setGender(Homme > Femme ? "Homme" : "Femme")
       }
@@ -164,6 +192,10 @@ function Persona({setModifPage, setformdata}) {
     setEnergy(Math.round(Energy/NombreTotal))
     setNature(Math.round(Nature/NombreTotal))
     setTactic(Math.round(Tactic/NombreTotal))
+
+   
+    
+    
 
     })
   },[])
@@ -272,16 +304,22 @@ function Persona({setModifPage, setformdata}) {
     <div className="frustrationsB">
         <h1 className='textB'>Frustations</h1>
 
-        <p className="textB">Manque de temps</p>
-        <p className="textB">Pas assez d'organisation</p>
+        {
+        Frustations.map((value,i)=>{
+        return <p className='textB' key={i}>{value[0]}</p>
+        })
+        }
 
     </div>
 
     <div className="outilsB">
         <h1 className="textB">Outils</h1>
 
-        <p className="textB">Réseaux sociaux</p>
-        <p className="textB">Web</p>
+        {
+        Tools.map((value,i)=>{
+        return <p className='textB' key={i}>{value[0]}</p>
+        })
+        }
 
     </div>
 
