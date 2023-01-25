@@ -418,7 +418,8 @@ input[type=range].custom-slider.custom-slider-bullet::-webkit-slider-thumb {
   width: 82%; 
   right: 0px; 
   border-radius: 60px 0px 0px 60px; 
-  overflow: overlay; }
+  overflow: overlay; 
+}
 
 .icon-menu { width: 17px; height: 17px; fill: white; margin-right: 16px; animation-name: Icon-Menu; }
 
@@ -442,8 +443,6 @@ div.title-menu { color: white; font-size: 14px; animation-name: Font-Menu; }
 .Box-menu { margin-top: 80px;}
 
 
-
-
 @keyframes li-Menu { 
   0% { left: -165px; }
   100% { left: 0px; }
@@ -458,46 +457,25 @@ div.title-menu { color: white; font-size: 14px; animation-name: Font-Menu; }
   100% { width: 100%; }
 }
 
-
-
 /* PERSONA ****************************************************/
 
 .textB {
-
   color: white;
-
+  padding: 5% 0 1% 0;
 } 
 
-
-:root {
-  --success: #00b894;
-  --progress: #e17055;
-}
-
 .progressbar-wrapper {
-  background-color: #dfe6e9;
-  color: white;
-  border-radius: 15px;
-  width: 100%;
+  display: flex;
+  background-color: #906dfa6c;
+  width: 70%;
 }
 
 .progressbar {
-  background-color: var(--progress);
-  color: white;
-  padding: 1rem;
+  background-image: linear-gradient(to right, #906dfa, #8c69f6, #c7b0fa);
+  color: rgb(0, 0, 0);
   text-align: right;
-  font-size: 20px;
-  border-radius: 15px;
 }
 
-.progressbar[title="downloading"] {
-   background-color: var(--progress);
-}
-
-.progressbar[title="downloaded"] {
-   background-color: var(--success);
-}
-  
 .mp4 {
   width: 100%;
 }
@@ -505,6 +483,7 @@ div.title-menu { color: white; font-size: 14px; animation-name: Font-Menu; }
 .mp3 {
   width: 60%;
 }
+
 /* .slider_result {
   height: 1em;
   margin-left: 5%;

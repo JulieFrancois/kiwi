@@ -205,38 +205,34 @@ function Persona({setModifPage, setformdata}) {
 
 <div className="gauche">
     <div className="personalite">
-        {/* <h1 className='textB'>Personnalité</h1> */}
 
-        {/* <!-- <p>Esprit</p> -->
-        <!-- <p>Energie</p> -->
-        <!-- <p>Nature</p>
-        <p>tactique</p> --> */}
 
 <h1 className="textB">Personnalité</h1>
+
  <div className="container">
     
-     <p className="textB">Esprit</p>
+    <p className="textB">Esprit</p>
+     
      <div className="progressbar-wrapper">
-      <div title="downloaded" class="progressbar mp4">{Spirit}</div>
+      <div title="downloaded" className="progressbar mp4">{Spirit}</div>
      </div>
+   
 
      <p className="textB">Energie</p>
      <div className="progressbar-wrapper">
-      <div title="downloading" class="progressbar mp3">{Energy}</div>
+      <div title="downloading" className="progressbar mp3">{Energy}</div>
      </div>
 
      <p className="textB">Nature</p>
-     <div clasNames="progressbar-wrapper">
-      <div title="downloading" class="progressbar mp3">{Nature}</div>
+     <div className="progressbar-wrapper">
+      <div title="downloading" className="progressbar mp3">{Nature}</div>
      </div>
 
      <p className="textB">Tactique</p>
      <div className="progressbar-wrapper">
-      <div title="downloading" class="progressbar mp3">{Tactic}</div>
+      <div title="downloading" className="progressbar mp3">{Tactic}</div>
      </div>
      
-
-
 </div>
 
         {/* <label for="esprit" className="textB">Esprit</label>
