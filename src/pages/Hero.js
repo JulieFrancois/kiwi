@@ -10,6 +10,7 @@ function Hero ({setModifPage}) {
             <br></br>On se charge du reste</p>
             <a onClick={() => setModifPage("Form")} className="cta" href="#" title="">Répondre au formulaire</a>
             <div className="bonhomme1"></div>
+            <div className="bgHero"></div>
             {/* <Footer></Footer> */}
         </>
         );

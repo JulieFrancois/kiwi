@@ -29,7 +29,7 @@ import html2canvas from 'html2canvas';
 function Persona({setModifPage, setformdata}) {
 
     const [FormRef,handleSubmit,resetForm] = useForm((data)=>
-    {setModifPage("Persona");setformdata(data)// Write your submit function here
+    {setModifPage("Persona");setformdata(data)
   })
 
 //   const [DOMAIN] = "https://illustrious-cat-7fb4d9.netlify.app/api/persona"
@@ -48,24 +48,12 @@ function Persona({setModifPage, setformdata}) {
   const [Tools, setTools] = React.useState([]);
   const handleScreenshot = () => {
     html2canvas(document.querySelector("#capture-area")).then(canvas => {
-        // Obtenir l'URL de l'image
         const dataUrl = canvas.toDataURL();
-        // Mettre à jour le lien de téléchargement
         document.querySelector("#download-link").href = dataUrl;
-        // Activer le lien de téléchargement
         document.querySelector("#download-link").click();
-      console.log(canvas);
     });
   };
 
-    // .then((response) => response.text())
-    // .then((data) => {
-    //   console.log(data);
-    // })
-    // .catch((error) => {
-    //   console.error("Error:", error);
-    // });
-  
   React.useEffect(()=>{
 
     axios
@@ -216,7 +204,7 @@ function Persona({setModifPage, setformdata}) {
 
     //JSX
     return (
-        <div id="capture-area">
+        <div>
         
     <section className="persona">
 
@@ -228,22 +216,22 @@ function Persona({setModifPage, setformdata}) {
     
      <p className="textB">Esprit</p>
      <div className="progressbar-wrapper">
-      <div title="downloaded" class="progressbar mp4">{Spirit}</div>
+      <div style={{width:Spirit+"%"}} title="" class="progressbar mp4">{Spirit}</div>
      </div>
 
      <p className="textB">Energie</p>
      <div className="progressbar-wrapper">
-      <div title="downloading" class="progressbar mp3">{Energy}</div>
+      <div style={{width:Energy+"%"}} title="" class="progressbar mp3">{Energy}</div>
      </div>
 
      <p className="textB">Nature</p>
-     <div clasNames="progressbar-wrapper">
-      <div title="downloading" class="progressbar mp3">{Nature}</div>
+     <div className="progressbar-wrapper">
+      <div style={{width:Nature+"%"}}  title="" class="progressbar mp3">{Nature}</div>
      </div>
 
      <p className="textB">Tactique</p>
      <div className="progressbar-wrapper">
-      <div title="downloading" class="progressbar mp3">{Tactic}</div>
+      <div style={{width:Tactic+"%"}}  title="" class="progressbar mp3">{Tactic}</div>
      </div>
     
 </div>
