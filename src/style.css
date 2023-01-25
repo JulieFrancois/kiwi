@@ -40,8 +40,6 @@
 
 body {
   background-color: white;
-  /* background: no-repeat url(/public/Vector10.svg);
-  background-position: -50% 105%; */
 }
 
 main {
@@ -52,11 +50,13 @@ main {
 /* HEADER ***********************************************************/
 
 header {
+  width: 100%;
   height: 10vh;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0 var(--sp_sm);
+  box-sizing: border-box;
 }
 
 footer.Persona, header.Persona{
@@ -135,21 +135,24 @@ a > img {
   background: no-repeat url(/public/Group28.svg);
   background-position: 75% 105%;
   position: absolute;
-  right: 20%;
+  right: 30%;
 }
 
 .bgHero {
-  width: 30%;
-  height: 90vh;
+  width: 100%;
+  height: 100vh;
   background: no-repeat url(/public/Vector10.svg);
   background-position: 75% 105%;
   position: absolute;
-  right: 20%;
-  z-index: auto;
+  right: 50%;
+  z-index: -1;
 }
 
 h2 {
-  font-size: var(--fs_h1);
+  font-size: var(--fs_h2);
+}
+h3 {
+  font-size: var(--fs_h2);
 }
 
 p {
@@ -186,13 +189,27 @@ p {
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* gap: 400px; */
 }
 
 .formFond {
+  width: 100%;
+  height: 315vh;
   background: no-repeat url(/public/Group33.png);
   background-position: 100%;
   background-size: contain;
+  position: absolute;
+  z-index: -1;
+}
+
+.formFond2 {
+  width: 100%;
+  height: 110vh;
+  background: no-repeat url(/public/Vector10.svg);
+  background-position: 75% 105%;
+  position: absolute;
+  left: -65%;
+  top: 215%;
+  z-index: -1;
 }
 
 .bonhomme2 {
@@ -221,10 +238,10 @@ p {
   height: 70vh;
   width: 50%;
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
   flex-direction: column;
-  /* border: solid black; */
+  /* border: solid black; TEST de la taille des questions*/ 
 }
 
 .Question>div {
@@ -238,6 +255,7 @@ p {
 
 .Titre {
   display: flex;
+  font-size: var(--fs_h1);
 }
 
 input,
@@ -288,17 +306,19 @@ input.radio{
 
 /* FORMULAIRE 2 ****************************************************/
 
-datalist {
+#tickmarks {
   display: flex;
   color: var(--lilac);
   justify-content: space-between;
+  width: 70%;
 }
 
 .personalite {
-  /* display: flex;
-  flex-direction: row; */
+  display: flex;
   font-size: larger;
   font-weight: 600;
+  justify-content: space-evenly;
+  width: 100%;
 }
 
 .interets,
@@ -307,8 +327,12 @@ datalist {
   flex-direction: column;
   font-size: larger;
   font-weight: 600;
+  align-items: center;
 }
 
+.fantome{
+  color: white;
+}
 /* 
 .espace{
 display: flex;
@@ -318,6 +342,9 @@ justify-content: space-between;
 .nom_categorie {
   display: flex;
   justify-content: center;
+  padding-top: 1vh;
+  font-size: var(--sp_sm);
+  font-weight: 200;
 }
 
 input[type=range] {
@@ -349,7 +376,7 @@ input[type=range].custom-slider.custom-slider-bullet {
   color: transparent;
   background: transparent;
   background-image: linear-gradient(to bottom, #180553, #180553, #180553);
-  /* background-position: center; */
+  background-position: center;
   background-repeat: no-repeat;
   background-size: 100% 25%;
 }
@@ -592,6 +619,7 @@ footer {
   justify-content: space-between;
   height: 10vh;
   padding: 0 var(--sp_sm);
+  box-sizing: border-box;
 }
 
 footer.Persona{

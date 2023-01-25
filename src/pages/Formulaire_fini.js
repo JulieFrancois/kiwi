@@ -18,7 +18,7 @@ function Formulaire_fini({setModifPage, setformdata}) {
           {/* <Header></Header> */}
           <section className="Formulaire_fini">
            <div className='elements'>
-          <h1>Félicitations <span className='ponctuation'>!</span></h1>
+          <h1 className='Titre'>Félicitations <span className='ponctuation'>!</span></h1>
           <div className='texte'>
             <p>Tu as aidé un UX designer à créer un persona.</p>
             <p>N’hésite pas à revenir</p>
@@ -29,10 +29,8 @@ function Formulaire_fini({setModifPage, setformdata}) {
           </div> */}
           
           <a onClick={() => setModifPage("Persona")} className="cta dashboard" href="#" title="">Voir le persona généré</a>
-            {/* <a className='dashboard'>Voir mon dashboard</a> */}
-            </div>
+          </div>
           </section>
-          {/* <Footer></Footer> */}
         </>
     );
   }

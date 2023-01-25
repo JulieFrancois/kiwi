@@ -16,26 +16,26 @@ function Formulaire2({setModifPage, setformdata}) {
       <img onClick={() => setModifPage("Form")} className="picto" src="./material-symbols_arrow-downward-rounded.png" title=""></img>
       <form ref={FormRef} onSubmit={handleSubmit} className="formulaire">
 
-      <h1 className='Titre'>Qu'aimes-tu ?</h1>
+      <h2 className='Titre'>Qu'aimes-tu ?</h2>
 
       <section className='Question'>
-      <h2>Comment te définirais-tu ?</h2>
+      <h3>Comment te définirais-tu ?</h3>
       <label className='nom_categorie'> Esprit</label>
         <label className='personalite'>
           <label htmlFor="Introvertie">Introvertie</label>
           <section className='espace'>
-          <input type="range" name="personalite" id="volume" min="1" max="10"  step="1" className='custom-slider custom-slider-bullet'/>
+          <input type="range" name="personalite" id="volume" min="0" max="100"  step="1" className='custom-slider custom-slider-bullet'/>
           <datalist>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-            <option value="6">6</option>
-            <option value="7">7</option>
-            <option value="8">8</option>
-            <option value="9">9</option>
-            <option value="10">10</option>
+            <option value="10"></option>
+            <option value="20"></option>
+            <option value="30"></option>
+            <option value="40"></option>
+            <option value="50"></option>
+            <option value="60"></option>
+            <option value="70"></option>
+            <option value="80"></option>
+            <option value="90"></option>
+            <option value="100"></option>
           </datalist>
           </section>
           <label htmlFor="Extravertie">Extravertie</label>
@@ -43,20 +43,20 @@ function Formulaire2({setModifPage, setformdata}) {
 
         <label className='nom_categorie'> Energie</label>
         <label className='personalite'>
-          <label for="Introvertie"> Intuitif </label>
+          <label for="Introvertie"> Intuitif<span className='fantome'>............</span></label>
           <section className='espace'>
-          <input type="range" name="personalite" id="volume" min="1" max="10"  step="1" className='custom-slider custom-slider-bullet'/>
+          <input type="range" name="personalite" id="volume" min="0" max="100"  step="1" className='custom-slider custom-slider-bullet'/>
           <datalist>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-            <option value="6">6</option>
-            <option value="7">7</option>
-            <option value="8">8</option>
-            <option value="9">9</option>
-            <option value="10">10</option>
+            <option value="10"></option>
+            <option value="20"></option>
+            <option value="30"></option>
+            <option value="40"></option>
+            <option value="50"></option>
+            <option value="60"></option>
+            <option value="70"></option>
+            <option value="80"></option>
+            <option value="90"></option>
+            <option value="100"></option>
           </datalist>
           </section>
           <label for="Extravertie">Observateur</label>
@@ -65,20 +65,20 @@ function Formulaire2({setModifPage, setformdata}) {
         
         <label className='nom_categorie'> Nature </label>
         <label className='personalite'>
-          <label for="Introvertie"> Pensée </label>
+          <label for="Introvertie"> Pensée<span className='fantome'>......</span></label>
           <section className='espace'>
-          <input type="range" name="personalite" id="volume" min="1" max="10"  step="1" className='custom-slider custom-slider-bullet'/>
+          <input type="range" name="personalite" id="volume" min="0" max="100"  step="1" className='custom-slider custom-slider-bullet'/>
           <datalist>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-            <option value="6">6</option>
-            <option value="7">7</option>
-            <option value="8">8</option>
-            <option value="9">9</option>
-            <option value="10">10</option>
+          <option value="10"></option>
+            <option value="20"></option>
+            <option value="30"></option>
+            <option value="40"></option>
+            <option value="50"></option>
+            <option value="60"></option>
+            <option value="70"></option>
+            <option value="80"></option>
+            <option value="90"></option>
+            <option value="100"></option>
           </datalist>
           </section>
           <label for="Extravertie">Sentiment</label>
@@ -87,20 +87,20 @@ function Formulaire2({setModifPage, setformdata}) {
         
         <label className='nom_categorie'> Tactique</label>
         <label className='personalite'>
-          <label for="Introvertie"> Jugement </label>
+          <label for="Introvertie"> Jugement<span className='fantome'>....</span></label>
           <section className='espace'>
-          <input type="range" name="personalite" id="volume" min="1" max="10"  step="1" className='custom-slider custom-slider-bullet'/>
+          <input type="range" name="personalite" id="volume" min="0" max="100"  step="1" className='custom-slider custom-slider-bullet'/>
           <datalist>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-            <option value="6">6</option>
-            <option value="7">7</option>
-            <option value="8">8</option>
-            <option value="9">9</option>
-            <option value="10">10</option>
+            <option value="10"></option>
+            <option value="20"></option>
+            <option value="30"></option>
+            <option value="40"></option>
+            <option value="50"></option>
+            <option value="60"></option>
+            <option value="70"></option>
+            <option value="80"></option>
+            <option value="90"></option>
+            <option value="100"></option>
           </datalist>
           </section>
           <label for="Extravertie">Prospection</label>
@@ -109,117 +109,117 @@ function Formulaire2({setModifPage, setformdata}) {
 
         <section className='Question'>
           <label className='interets'>
-          À quel point aimes-tu ça ? 
+          <h2>À quel point aimes-tu ça ?</h2>
           <label className='nom_categorie'> Cinéma </label>
           <section className='espace'></section>
           <input type="range" name="interets" id="volume" min="1" max="10"  step="1" list="tickmarks" className='custom-slider custom-slider-bullet'/>
             <datalist id="tickmarks">
-              <option value="1"></option>
-              <option value="2"></option>
-              <option value="3"></option>
-              <option value="4"></option>
-              <option value="5"></option>
-              <option value="6"></option>
-              <option value="7"></option>
-              <option value="8"></option>
-              <option value="9"></option>
-              <option value="10"></option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
             </datalist>
 
             <label className='nom_categorie'> Cuisine </label>
           <section className='espace'></section>
           <input type="range" name="interets" id="volume" min="1" max="10"  step="1" list="tickmarks" className='custom-slider custom-slider-bullet'/>
             <datalist id="tickmarks">
-              <option value="1"></option>
-              <option value="2"></option>
-              <option value="3"></option>
-              <option value="4"></option>
-              <option value="5"></option>
-              <option value="6"></option>
-              <option value="7"></option>
-              <option value="8"></option>
-              <option value="9"></option>
-              <option value="10"></option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
             </datalist>
 
             <label className='nom_categorie'> Musique </label>
           <section className='espace'></section>
           <input type="range" name="interets" id="volume" min="1" max="10"  step="1" list="tickmarks" className='custom-slider custom-slider-bullet'/>
             <datalist id="tickmarks">
-              <option value="1"></option>
-              <option value="2"></option>
-              <option value="3"></option>
-              <option value="4"></option>
-              <option value="5"></option>
-              <option value="6"></option>
-              <option value="7"></option>
-              <option value="8"></option>
-              <option value="9"></option>
-              <option value="10"></option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
             </datalist>
 
             <label className='nom_categorie'> Réseaux sociaux </label>
           <section className='espace'></section>
           <input type="range" name="interets" id="volume" min="1" max="10"  step="1" list="tickmarks" className='custom-slider custom-slider-bullet'/>
             <datalist id="tickmarks">
-              <option value="1"></option>
-              <option value="2"></option>
-              <option value="3"></option>
-              <option value="4"></option>
-              <option value="5"></option>
-              <option value="6"></option>
-              <option value="7"></option>
-              <option value="8"></option>
-              <option value="9"></option>
-              <option value="10"></option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
             </datalist>
 
             <label className='nom_categorie'> Sport </label>
           <section className='espace'></section>
           <input type="range" name="interets" id="volume" min="1" max="10"  step="1" list="tickmarks" className='custom-slider custom-slider-bullet'/>
             <datalist id="tickmarks">
-              <option value="1"></option>
-              <option value="2"></option>
-              <option value="3"></option>
-              <option value="4"></option>
-              <option value="5"></option>
-              <option value="6"></option>
-              <option value="7"></option>
-              <option value="8"></option>
-              <option value="9"></option>
-              <option value="10"></option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
             </datalist>
 
             <label className='nom_categorie'> Voiture </label>
           <section className='espace'></section>
           <input type="range" name="interets" id="volume" min="1" max="10"  step="1" list="tickmarks" className='custom-slider custom-slider-bullet'/>
             <datalist id="tickmarks">
-              <option value="1"></option>
-              <option value="2"></option>
-              <option value="3"></option>
-              <option value="4"></option>
-              <option value="5"></option>
-              <option value="6"></option>
-              <option value="7"></option>
-              <option value="8"></option>
-              <option value="9"></option>
-              <option value="10"></option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
             </datalist>
             
             <label className='nom_categorie'> Voyage </label>
           <section className='espace'></section>
           <input type="range" name="interets" id="volume" min="1" max="10"  step="1" list="tickmarks" className='custom-slider custom-slider-bullet'/>
             <datalist id="tickmarks">
-              <option value="1"></option>
-              <option value="2"></option>
-              <option value="3"></option>
-              <option value="4"></option>
-              <option value="5"></option>
-              <option value="6"></option>
-              <option value="7"></option>
-              <option value="8"></option>
-              <option value="9"></option>
-              <option value="10"></option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
             </datalist>
           </label>
         </section>

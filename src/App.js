@@ -21,7 +21,7 @@ function App() {
 
   //JSX
   return (
-      <div id="capture-area">
+      <div id="capture-area" >
         <Header ModifPage={ModifPage} setModifPage={setModifPage}></Header>
         <section className="hero">
           {ModifPage === "App" && <Hero setModifPage={setModifPage}></Hero>}
