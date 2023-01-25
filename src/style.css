@@ -439,16 +439,18 @@ input[type=range].custom-slider.custom-slider-bullet::-webkit-slider-thumb {
   width: 82%; 
   right: 0px; 
   border-radius: 60px 0px 0px 60px; 
-  overflow: overlay; }
+  overflow: overlay;
+  box-shadow: 0px 0px 10px #9776FF;
+ }
 
-.icon-menu { width: 17px; height: 17px; fill: white; margin-right: 16px; animation-name: Icon-Menu; }
+.icon-menu { width: 25px; height: 25px; fill: white; margin-right: 16px; animation-name: Icon-Menu; }
 
 li.li-mneu { display: flex; padding: 14px 24px; margin-bottom: 6px; cursor: pointer; position: relative; animation-name: li-Menu; }
 div.title-menu { color: white; font-size: 14px; animation-name: Font-Menu; }
 
 
 /* Barre à droite avec formulaire, déconnecter etc...*/
-.Side-bar { background-color: #180553; width: 25%; height: 100%; position: absolute; left: 0px; top: 0px; box-shadow: 5px 0px 10px #9776FF;}
+.Side-bar { background-color: #180553; width: 25%; height: 100%; position: absolute; left: 0px; top: 0px;}
 
 /* Bouton se déconnecter marge */
 .logout { margin-top: 50px; }
