@@ -71,6 +71,10 @@ a > .logo {
   display: none;
 }
 
+.whitelogofooter{
+  display: none;
+}
+
 header.Persona > .whitelogo{
   display: flex;
 }
@@ -81,6 +85,14 @@ header.Persona > .logo{
 
 footer.Persona > .whitelogo{
   display: flex;
+}
+
+footer.Persona > .whitelogofooter{
+  width: var(--sp_xxl);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
 }
  
 footer.Persona > .logo{
@@ -486,9 +498,7 @@ div.title-menu { color: white; font-size: 14px; animation-name: Font-Menu; }
 /* PERSONA ****************************************************/
 
 .textB {
-
   color: white;
-
 } 
 
 
@@ -544,7 +554,6 @@ div.title-menu { color: white; font-size: 14px; animation-name: Font-Menu; }
 }
 
 .boutonB {
-
   background-color: #DBF227;
   width: var(--sp_xxl);
   font-size: var(--sp_sm);
@@ -552,10 +561,16 @@ div.title-menu { color: white; font-size: 14px; animation-name: Font-Menu; }
   text-decoration: none;
   border-radius: 5px;
   text-align: center;
+  color: var(--dark_blue);
+  font-weight: 600;
+}
+
+#download-link{
+  color: var(--dark_blue);
 }
 
 .persona {
-  /* height: 80vh; */
+  height: 80vh;
   display: flex;
   align-items: center;
   justify-content: space-between;

@@ -2,6 +2,8 @@ import React from 'react';
 import Footer from '../components/Footer';
 import useForm from '../utile/useform';
 import axios from 'axios';
+import html2canvas from 'html2canvas';
+
 
 // function Postage(){
 
@@ -44,6 +46,17 @@ function Persona({setModifPage, setformdata}) {
   const [Interest, setInterest] = React.useState([]);
   const [Frustations, setFrustrations] = React.useState([]);
   const [Tools, setTools] = React.useState([]);
+  const handleScreenshot = () => {
+    html2canvas(document.querySelector("#capture-area")).then(canvas => {
+        // Obtenir l'URL de l'image
+        const dataUrl = canvas.toDataURL();
+        // Mettre à jour le lien de téléchargement
+        document.querySelector("#download-link").href = dataUrl;
+        // Activer le lien de téléchargement
+        document.querySelector("#download-link").click();
+      console.log(canvas);
+    });
+  };
 
     // .then((response) => response.text())
     // .then((data) => {
@@ -203,18 +216,12 @@ function Persona({setModifPage, setformdata}) {
 
     //JSX
     return (
-        <>
+        <div id="capture-area">
         
     <section className="persona">
 
 <div className="gauche">
     <div className="personalite">
-        {/* <h2 className='textB'>Personnalité</h2> */}
-
-        {/* <!-- <p>Esprit</p> -->
-        <!-- <p>Energie</p> -->
-        <!-- <p>Nature</p>
-        <p>tactique</p> --> */}
 
 <h2 className="textB">Personnalité</h2>
  <div className="container">
@@ -254,7 +261,8 @@ function Persona({setModifPage, setformdata}) {
     </div>
 
     {/* <a href="#" onClick={() => Postage} title="" className="boutonB">Postage</a> */}
-    <a href="#" title="" className="boutonB">Télécharger</a>
+    <a href="#" onClick={handleScreenshot} title="" className="boutonB">Télécharger</a>
+    <a id="download-link" href="#" download></a>
 </div>
 
 <div className="droite">
@@ -297,7 +305,7 @@ function Persona({setModifPage, setformdata}) {
 
 </section>
     
-        </>
+        </div>
     );
   }
 

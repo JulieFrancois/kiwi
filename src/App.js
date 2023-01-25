@@ -9,6 +9,7 @@ import Formulaire_fini from './pages/Formulaire_fini';
 import Persona from './pages/Persona';
 import axios from 'axios';
 import Dashboard from './pages/Dashboard';
+import html2canvas from 'html2canvas';
 
 
 function App() {
