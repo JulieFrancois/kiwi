@@ -39,9 +39,9 @@
 }
 
 body {
-  background-color: whitesmoke;
-  background: no-repeat url(/public/Vector10.svg);
-  background-position: -50% 105%;
+  background-color: white;
+  /* background: no-repeat url(/public/Vector10.svg);
+  background-position: -50% 105%; */
 }
 
 main {
@@ -59,13 +59,34 @@ header {
   padding: 0 var(--sp_sm);
 }
 
-header.Persona{
+footer.Persona, header.Persona{
   background-color: var(--dark_blue);
 }
 
 a > .logo {
   width: 65%;
 }
+
+.whitelogo{
+  display: none;
+}
+
+header.Persona > .whitelogo{
+  display: flex;
+}
+ 
+header.Persona > .logo{
+  display: none;
+}
+
+footer.Persona > .whitelogo{
+  display: flex;
+}
+ 
+footer.Persona > .logo{
+  display: none;
+}
+
 
 nav{
   width: 10%;
@@ -105,7 +126,7 @@ a > img {
   right: 20%;
 }
 
-h1 {
+h2 {
   font-size: var(--fs_h1);
 }
 
@@ -113,7 +134,7 @@ p {
   font-size: var(--sp_sm);
 }
 
-h1,
+h2,
 p {
   padding-bottom: var(--sp_sm);
 }
@@ -484,7 +505,7 @@ div.title-menu { color: white; font-size: 14px; animation-name: Font-Menu; }
 .progressbar {
   background-color: var(--progress);
   color: white;
-  padding: 1rem;
+  /* padding: 1rem; */
   text-align: right;
   font-size: 20px;
   border-radius: 15px;
@@ -532,7 +553,7 @@ div.title-menu { color: white; font-size: 14px; animation-name: Font-Menu; }
 }
 
 .persona {
-  height: 80vh;
+  /* height: 80vh; */
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -563,6 +584,12 @@ footer {
 
 footer.Persona{
   background-color: var(--dark_blue);
+}
+
+footer.App{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }
 
 footer>img {
@@ -596,7 +623,7 @@ footer>img {
   }
   
 
-  h1 {
+  h2 {
     font-size: var(--fs_h2);
   }
 

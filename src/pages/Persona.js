@@ -3,6 +3,27 @@ import Footer from '../components/Footer';
 import useForm from '../utile/useform';
 import axios from 'axios';
 
+// function Postage(){
+
+//     fetch("https://illustrious-cat-7fb4d9.netlify.app/api/persona", {
+//         method: "POST",
+//         headers: { "Access-Control-Allow-Origin": "*", "Content-Type": "application/json" },
+//         mode: "no-cors",
+//         body: JSON.stringify({
+//             age:31,
+//             gender:"Femme",
+//             city:"Evry",
+//             activity:"DA",
+//             spirit:99,
+//             energy:1,
+//             nature:78,
+//             tactic:12,
+//             interest:["Voiture","Musique","Sport"],
+//             frustrations:["Manque de temps","Pas assez de connaissance"],
+//             tools:["Suite Adobe", "Ordinateur"]
+//             }),
+//       })}
+
 function Persona({setModifPage, setformdata}) {
 
     const [FormRef,handleSubmit,resetForm] = useForm((data)=>
@@ -23,31 +44,14 @@ function Persona({setModifPage, setformdata}) {
   const [Interest, setInterest] = React.useState([]);
   const [Frustations, setFrustrations] = React.useState([]);
   const [Tools, setTools] = React.useState([]);
-  
 
-//   function Postage(){
-//     axios
-//       .put("https://illustrious-cat-7fb4d9.netlify.app/api/persona",{
-//         age:31,
-//         gender:"Homme",
-//         city:"Nanterre",
-//         activity:"Droit",
-//         spirit:91,
-//         energy:8,
-//         nature:32,
-//         tactic:98,
-//         interest:["Cinéma","Cuisine","Voyages"],
-//         frustrations:["Pas assez d’organisation"],
-//         tools:["Suite Office"]
-//       },
-//       {headers: {
-//         'Content-Type': 'application/json',
-//         'Access-Control-Allow-Origin': '*',
-//       'Access-Control-Allow-Methods':'GET,PUT,POST,DELETE,PATCH,OPTIONS',
-//       'Access-Control-Allow-Headers':'*'}})
-//       .then((response) => response)
-//       .then((data) => {console.log(data)})
-//   }
+    // .then((response) => response.text())
+    // .then((data) => {
+    //   console.log(data);
+    // })
+    // .catch((error) => {
+    //   console.error("Error:", error);
+    // });
   
   React.useEffect(()=>{
 
@@ -205,14 +209,14 @@ function Persona({setModifPage, setformdata}) {
 
 <div className="gauche">
     <div className="personalite">
-        {/* <h1 className='textB'>Personnalité</h1> */}
+        {/* <h2 className='textB'>Personnalité</h2> */}
 
         {/* <!-- <p>Esprit</p> -->
         <!-- <p>Energie</p> -->
         <!-- <p>Nature</p>
         <p>tactique</p> --> */}
 
-<h1 className="textB">Personnalité</h1>
+<h2 className="textB">Personnalité</h2>
  <div className="container">
     
      <p className="textB">Esprit</p>
@@ -234,75 +238,12 @@ function Persona({setModifPage, setformdata}) {
      <div className="progressbar-wrapper">
       <div title="downloading" class="progressbar mp3">{Tactic}</div>
      </div>
-     
-
-
+    
 </div>
-
-        {/* <label for="esprit" className="textB">Esprit</label>
-        <input type="range" name="personalite" id="volume" min="0" max="100" step="1"  className="slider_result"/>
-        <datalist>
-            <option value="10"></option>
-            <option value="20"></option>
-            <option value="30"></option>
-            <option value="40"></option>
-            <option value="50"></option>
-            <option value="60"></option>
-            <option value="70"></option>
-            <option value="80"></option>
-            <option value="90"></option>
-            <option value="100"></option>
-        </datalist>
-
-        <label for="Extravertie" className="textB">Energie</label>
-        <input type="range" name="personalite" id="volume" min="0" max="11" step="1" className="slider_result"/>
-        <datalist>
-            <option value="1"></option>
-            <option value="2"></option>
-            <option value="3"></option>
-            <option value="4"></option>
-            <option value="5"></option>
-            <option value="6"></option>
-            <option value="7"></option>
-            <option value="8"></option>
-            <option value="9"></option>
-            <option value="10"></option>
-        </datalist>
-
-        <label for="Extravertie" className="textB">Nature</label>
-        <input type="range" name="personalite" id="volume" min="0" max="11" step="1" className="slider_result"/>
-        <datalist>
-            <option value="1"></option>
-            <option value="2"></option>
-            <option value="3"></option>
-            <option value="4"></option>
-            <option value="5"></option>
-            <option value="6"></option>
-            <option value="7"></option>
-            <option value="8"></option>
-            <option value="9"></option>
-            <option value="10"></option>
-        </datalist>
-
-        <label for="Extravertie" className="textB">Tactique</label>
-        <input type="range" name="personalite" id="volume" min="0" max="11" step="1" className="slider_result"/>
-        <datalist>
-            <option value="1"></option>
-            <option value="2"></option>
-            <option value="3"></option>
-            <option value="4"></option>
-            <option value="5"></option>
-            <option value="6"></option>
-            <option value="7"></option>
-            <option value="8"></option>
-            <option value="9"></option>
-            <option value="10"></option>
-        </datalist> */}
-
     </div>
 
     <div className="interetB">
-        <h1 className='textB'>Centres d'intérêt</h1>
+        <h2 className='textB'>Centres d'intérêt</h2>
 
         {
         Interest.map((value,i)=>{
@@ -312,14 +253,14 @@ function Persona({setModifPage, setformdata}) {
 
     </div>
 
-    {/* <a href="#" onClick={() => Postage()} title="" className="boutonB">Télécharger</a> */}
+    {/* <a href="#" onClick={() => Postage} title="" className="boutonB">Postage</a> */}
     <a href="#" title="" className="boutonB">Télécharger</a>
 </div>
 
 <div className="droite">
 
     <div className="profilB">
-        <h1 className='textB'>Profil</h1>
+        <h2 className='textB'>Profil</h2>
 
         <p className="textB">{FirstName}</p>
         <p className="textB">{Age} ans</p>
@@ -330,7 +271,7 @@ function Persona({setModifPage, setformdata}) {
     </div>
 
     <div className="frustrationsB">
-        <h1 className='textB'>Frustations</h1>
+        <h2 className='textB'>Frustations</h2>
 
         {
         Frustations.map((value,i)=>{
@@ -341,7 +282,7 @@ function Persona({setModifPage, setformdata}) {
     </div>
 
     <div className="outilsB">
-        <h1 className="textB">Outils</h1>
+        <h2 className="textB">Outils</h2>
 
         {
         Tools.map((value,i)=>{
@@ -355,7 +296,7 @@ function Persona({setModifPage, setformdata}) {
 
 
 </section>
-          <Footer></Footer>
+    
         </>
     );
   }

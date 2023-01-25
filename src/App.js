@@ -1,7 +1,7 @@
 import React from 'react';
 import "./style.css"
 import Header from './components/Header';
-// import Footer from './components/Footer'; à ajouter sur la première page quand le set up sera fait
+import Footer from './components/Footer';
 import Formulaire from './pages/Formulaire';
 import Hero from './pages/Hero';
 import Formulaire2 from './pages/Formulaire2';
@@ -17,11 +17,10 @@ function App() {
   const[ModifPage,setModifPage] = React.useState("App"); 
   const[formdata,setformdata,] = React.useState();
 
-  // const [Genre, setGenre] = React.useState("Femme");()
 
   //JSX
   return (
-      <>
+      <div>
         <Header ModifPage={ModifPage} setModifPage={setModifPage}></Header>
         <section className="hero">
           {ModifPage === "App" && <Hero setModifPage={setModifPage}></Hero>}
@@ -31,8 +30,8 @@ function App() {
         {ModifPage === "FormF" && <Formulaire_fini setModifPage={setModifPage} setformdata={setformdata}></Formulaire_fini>}
         {ModifPage === "Persona" && <Persona setModifPage={setModifPage} setformdata={setformdata}></Persona>}
         {ModifPage === "Dashboard" && <Dashboard setModifPage={setModifPage} setformdata={setformdata}></Dashboard>}
-        
-      </>
+        <Footer ModifPage={ModifPage} setModifPage={setModifPage}></Footer>
+      </div>
   );
 }
 

@@ -68,7 +68,7 @@ const [FormRef,handleSubmit,resetForm] = useForm((data)=>
         <a onClick={() => setModifPage("Form2")} className="cta suivant" href="#" title="">Suivant</a>
         </section>
         </form>
-        <Footer></Footer>
+        {/* <Footer></Footer> */}
     </div>
 
     )

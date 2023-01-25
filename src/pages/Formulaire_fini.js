@@ -32,7 +32,7 @@ function Formulaire_fini({setModifPage, setformdata}) {
             {/* <a className='dashboard'>Voir mon dashboard</a> */}
             </div>
           </section>
-          <Footer></Footer>
+          {/* <Footer></Footer> */}
         </>
     );
   }

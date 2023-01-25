@@ -250,7 +250,7 @@ function Formulaire2({setModifPage, setformdata}) {
 
         <a onClick={() => setModifPage("FormF")} className="cta suivant" href="#" title="">Terminer</a>
         </form>
-        <Footer></Footer>
+        {/* <Footer></Footer> */}
     </div>
   )}
 
