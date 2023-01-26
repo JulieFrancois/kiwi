@@ -740,6 +740,10 @@ footer > img {
     padding: 5% 3%;
   }
 
+  .Titre{
+    font-size: var(--fs_h2);
+  }
+
   .bonhomme1, .form2Fond{
     display: none;
     
