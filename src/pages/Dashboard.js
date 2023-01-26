@@ -20,7 +20,7 @@ return(
 
         <section className="page">
             <div className="box">
-                <div>
+                <div className='content'>
                     <h1 className='textB Titre paddong'>Formulaire&nbsp;<span className='number'>#2</span></h1>
                     <div className='mininav'>
                         <a href="#" title="" className="">Aperçu</a>

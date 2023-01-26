@@ -683,10 +683,10 @@ div.title-menu { color: white; font-size: 14px; animation-name: Font-Menu; }
   font-weight: 700;
  }
 
- /* .box:first-child{
+.content{
   display: flex;
   justify-content: space-between;
- } */
+ }
 
  .number{
   color: var(--lilac);
