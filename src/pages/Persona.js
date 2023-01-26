@@ -3,7 +3,6 @@ import useForm from '../utile/useform';
 import axios from 'axios';
 import html2canvas from 'html2canvas';
 
-
 function Persona({setModifPage, setformdata}) {
     const [FormRef,handleSubmit,resetForm] = useForm((data)=>
     {setModifPage("Persona");setformdata(data)
@@ -90,7 +89,7 @@ function Persona({setModifPage, setformdata}) {
 
         //OTHERS //////////////////////////////////////////////////////////////
 
-        //INTERÊT
+        //INTÉRÊT
         element.interest.forEach(value => {
             Interest[value] = Interest[value] ? Interest[value] + 1 : 1;
         });
