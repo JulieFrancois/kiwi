@@ -2,11 +2,34 @@ import React from 'react';
 import Footer from '../components/Footer';
 import useForm from '../utile/useform';
 import axios from 'axios';
+import html2canvas from 'html2canvas';
+
+
+// function Postage(){
+
+//     fetch("https://illustrious-cat-7fb4d9.netlify.app/api/persona", {
+//         method: "POST",
+//         headers: { "Access-Control-Allow-Origin": "*", "Content-Type": "application/json" },
+//         mode: "no-cors",
+//         body: JSON.stringify({
+//             age:31,
+//             gender:"Femme",
+//             city:"Evry",
+//             activity:"DA",
+//             spirit:99,
+//             energy:1,
+//             nature:78,
+//             tactic:12,
+//             interest:["Voiture","Musique","Sport"],
+//             frustrations:["Manque de temps","Pas assez de connaissance"],
+//             tools:["Suite Adobe", "Ordinateur"]
+//             }),
+//       })}
 
 function Persona({setModifPage, setformdata}) {
 
     const [FormRef,handleSubmit,resetForm] = useForm((data)=>
-    {setModifPage("Persona");setformdata(data)// Write your submit function here
+    {setModifPage("Persona");setformdata(data)
   })
 
 //   const [DOMAIN] = "https://illustrious-cat-7fb4d9.netlify.app/api/persona"
@@ -23,32 +46,14 @@ function Persona({setModifPage, setformdata}) {
   const [Interest, setInterest] = React.useState([]);
   const [Frustations, setFrustrations] = React.useState([]);
   const [Tools, setTools] = React.useState([]);
-  
+  const handleScreenshot = () => {
+    html2canvas(document.querySelector("#capture-area")).then(canvas => {
+        const dataUrl = canvas.toDataURL();
+        document.querySelector("#download-link").href = dataUrl;
+        document.querySelector("#download-link").click();
+    });
+  };
 
-//   function Postage(){
-//     axios
-//       .put("https://illustrious-cat-7fb4d9.netlify.app/api/persona",{
-//         age:31,
-//         gender:"Homme",
-//         city:"Nanterre",
-//         activity:"Droit",
-//         spirit:91,
-//         energy:8,
-//         nature:32,
-//         tactic:98,
-//         interest:["Cinéma","Cuisine","Voyages"],
-//         frustrations:["Pas assez d’organisation"],
-//         tools:["Suite Office"]
-//       },
-//       {headers: {
-//         'Content-Type': 'application/json',
-//         'Access-Control-Allow-Origin': '*',
-//       'Access-Control-Allow-Methods':'GET,PUT,POST,DELETE,PATCH,OPTIONS',
-//       'Access-Control-Allow-Headers':'*'}})
-//       .then((response) => response)
-//       .then((data) => {console.log(data)})
-//   }
-  
   React.useEffect(()=>{
 
     axios
@@ -199,106 +204,43 @@ function Persona({setModifPage, setformdata}) {
 
     //JSX
     return (
-        <>
+        <div>
         
     <section className="persona">
 
 <div className="gauche">
-    <div className="personalite">
+    <div className="personalite2">
 
-
-<h1 className="textB">Personnalité</h1>
-
+<h2 className="textB">Personnalité</h2>
  <div className="container">
     
     <p className="textB">Esprit</p>
      
      <div className="progressbar-wrapper">
-      <div title="downloaded" className="progressbar mp4">{Spirit}</div>
+      <div style={{width:Spirit+"%"}} title="" class="progressbar mp4">{Spirit}</div>
      </div>
    
 
      <p className="textB">Energie</p>
      <div className="progressbar-wrapper">
-      <div title="downloading" className="progressbar mp3">{Energy}</div>
+      <div style={{width:Energy+"%"}} title="" class="progressbar mp3">{Energy}</div>
      </div>
 
      <p className="textB">Nature</p>
      <div className="progressbar-wrapper">
-      <div title="downloading" className="progressbar mp3">{Nature}</div>
+      <div style={{width:Nature+"%"}}  title="" class="progressbar mp3">{Nature}</div>
      </div>
 
      <p className="textB">Tactique</p>
      <div className="progressbar-wrapper">
-      <div title="downloading" className="progressbar mp3">{Tactic}</div>
+      <div style={{width:Tactic+"%"}}  title="" class="progressbar mp3">{Tactic}</div>
      </div>
-     
+    
 </div>
-
-        {/* <label for="esprit" className="textB">Esprit</label>
-        <input type="range" name="personalite" id="volume" min="0" max="100" step="1"  className="slider_result"/>
-        <datalist>
-            <option value="10"></option>
-            <option value="20"></option>
-            <option value="30"></option>
-            <option value="40"></option>
-            <option value="50"></option>
-            <option value="60"></option>
-            <option value="70"></option>
-            <option value="80"></option>
-            <option value="90"></option>
-            <option value="100"></option>
-        </datalist>
-
-        <label for="Extravertie" className="textB">Energie</label>
-        <input type="range" name="personalite" id="volume" min="0" max="11" step="1" className="slider_result"/>
-        <datalist>
-            <option value="1"></option>
-            <option value="2"></option>
-            <option value="3"></option>
-            <option value="4"></option>
-            <option value="5"></option>
-            <option value="6"></option>
-            <option value="7"></option>
-            <option value="8"></option>
-            <option value="9"></option>
-            <option value="10"></option>
-        </datalist>
-
-        <label for="Extravertie" className="textB">Nature</label>
-        <input type="range" name="personalite" id="volume" min="0" max="11" step="1" className="slider_result"/>
-        <datalist>
-            <option value="1"></option>
-            <option value="2"></option>
-            <option value="3"></option>
-            <option value="4"></option>
-            <option value="5"></option>
-            <option value="6"></option>
-            <option value="7"></option>
-            <option value="8"></option>
-            <option value="9"></option>
-            <option value="10"></option>
-        </datalist>
-
-        <label for="Extravertie" className="textB">Tactique</label>
-        <input type="range" name="personalite" id="volume" min="0" max="11" step="1" className="slider_result"/>
-        <datalist>
-            <option value="1"></option>
-            <option value="2"></option>
-            <option value="3"></option>
-            <option value="4"></option>
-            <option value="5"></option>
-            <option value="6"></option>
-            <option value="7"></option>
-            <option value="8"></option>
-            <option value="9"></option>
-            <option value="10"></option>
-        </datalist> */}
-
     </div>
 
     <div className="interetB">
-        <h1 className='textB'>Centres d'intérêt</h1>
+        <h2 className='textB'>Centres d'intérêt</h2>
 
         {
         Interest.map((value,i)=>{
@@ -308,16 +250,15 @@ function Persona({setModifPage, setformdata}) {
 
     </div>
 
-    {/* <a href="#" onClick={() => Postage()} title="" className="boutonB">Télécharger</a> */}
-    <a href="#" title="" className="boutonB">Télécharger</a>
+    {/* <a href="#" onClick={() => Postage} title="" className="boutonB">Postage</a> */}
+    <a href="#" onClick={handleScreenshot} title="" className="boutonB">Télécharger</a>
+    <a id="download-link" href="#" download></a>
 </div>
 
 <div className="droite">
 
     <div className="profilB">
-        <h1 className='textB'>Profil</h1>
-
-        <p className="textB">{FirstName}</p>
+        <h2 className='textB'>Profil de <span className='name'>{FirstName}</span></h2>
         <p className="textB">{Age} ans</p>
         <p className="textB">{Gender}</p>
         <p className="textB">{City}</p>
@@ -326,7 +267,7 @@ function Persona({setModifPage, setformdata}) {
     </div>
 
     <div className="frustrationsB">
-        <h1 className='textB'>Frustations</h1>
+        <h2 className='textB'>Frustations</h2>
 
         {
         Frustations.map((value,i)=>{
@@ -337,7 +278,7 @@ function Persona({setModifPage, setformdata}) {
     </div>
 
     <div className="outilsB">
-        <h1 className="textB">Outils</h1>
+        <h2 className="textB">Outils</h2>
 
         {
         Tools.map((value,i)=>{
@@ -351,8 +292,8 @@ function Persona({setModifPage, setformdata}) {
 
 
 </section>
-          <Footer></Footer>
-        </>
+    
+        </div>
     );
   }
 
