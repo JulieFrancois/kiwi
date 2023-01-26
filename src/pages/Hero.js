@@ -4,7 +4,7 @@ import Footer from '../components/Footer';
 function Hero ({setModifPage}) {
     return (
         <>
-            <h1 className='Titre'>Un nouvel outil pour aider les UX designers à réaliser leurs personas</h1>
+            <h1 className='Titre paddong'>Un nouvel outil pour aider les UX designers à réaliser<br></br> leurs personas</h1>
             <p>Tu es utilisateur et tu veux aider un UX designer ? 
             <br></br>Réponds aux formulaire.
             <br></br>On se charge du reste</p>

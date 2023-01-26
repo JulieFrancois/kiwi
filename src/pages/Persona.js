@@ -28,6 +28,8 @@ import html2canvas from 'html2canvas';
 
 function Persona({setModifPage, setformdata}) {
 
+   
+
     const [FormRef,handleSubmit,resetForm] = useForm((data)=>
     {setModifPage("Persona");setformdata(data)
   })
@@ -197,6 +199,8 @@ function Persona({setModifPage, setformdata}) {
     setEnergy(Math.round(Energy/NombreTotal))
     setNature(Math.round(Nature/NombreTotal))
     setTactic(Math.round(Tactic/NombreTotal))
+
+
 
     })
   },[])

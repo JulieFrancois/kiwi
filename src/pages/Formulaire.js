@@ -1,12 +1,15 @@
 import React from 'react';
 import useForm from '../utile/useform';
 import Footer from '../components/Footer';
+import { formToJSON } from 'axios';
 
-function Formulaire({setModifPage, setformdata}) {
+function Formulaire({setModifPage, setformdata,formdata}) {
 
 // const Formulaire = ({setModifPage}) => {
-const [FormRef,handleSubmit,resetForm] = useForm((data)=>
-    {console.log(React.useState) // Write your submit function here
+const [FormRef,handleSubmit,resetForm] = useForm((data)=>{
+  setformdata({...formdata,...data})
+  setModifPage("Form2")
+
   })
 
   return (
@@ -23,14 +26,14 @@ const [FormRef,handleSubmit,resetForm] = useForm((data)=>
         <section className='Question'>
           <label  className="age" >
             Quel âge as-tu ? 
-            <input type="number" name="age" placeholder=" Ex : 23"/>
+            <input type="number" name="age" placeholder=" Ex : 23" required/>
           </label>
           </section>
           <section className='Question'>
               <label className="genre">
               <p>Quel est ton genre ?</p>
               <div>
-                  <input type="radio" className="radio" name="genre" value="Femme"/>
+                  <input type="radio" className="radio" name="genre" value="Femme" required/>
                   <label for="Femme">Femme</label>
               </div>
               <div>
@@ -45,20 +48,21 @@ const [FormRef,handleSubmit,resetForm] = useForm((data)=>
 
           <label className="ville">
             Dans quelle ville habites-tu ?
-            <input type="text" name="ville" placeholder="Paris, Marseille, Massy..."/> 
+            <input type="text" name="ville" placeholder="Paris, Marseille, Massy..." required/> 
           </label>
           </section>
 
           <section className='Question'>
           <label className="activite">
           Quel est ton domaine d'activité ?
-          <select name="domaine">
-          <option selected value="Développement web">Développement web</option>
-          <option value="Graphisme">Graphisme</option>
-          <option value="Art">Art</option>
-          <option value="Commerce">Commerce</option>
-          <option value="Relation client">Relation client</option>
-          <option value="Droit">Droit</option>
+          <select name="domaine" required defaultValue="Sélectionner">
+            <option selected value="">Sélectionner</option>
+            <option value="Développement web">Développement web</option>
+            <option value="Graphisme">Graphisme</option>
+            <option value="Art">Art</option>
+            <option value="Commerce">Commerce</option>
+            <option value="Relation client">Relation client</option>
+            <option value="Droit">Droit</option>
           </select>
 
           </label>
@@ -67,7 +71,7 @@ const [FormRef,handleSubmit,resetForm] = useForm((data)=>
       
           <section className='Question'>
           {/* <button className="suivant">Suivant</button> */}
-          <a onClick={() => setModifPage("Form2")} className="cta suivant" href="#" title="">Suivant</a>
+          <button type="submit" className="cta suivant" href="#" title="">Suivant</button>
           </section>
           </form>
         </>

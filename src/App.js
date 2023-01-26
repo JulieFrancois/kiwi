@@ -16,19 +16,20 @@ function App() {
 
   // JAVASCRIPT
   const[ModifPage,setModifPage] = React.useState("App"); 
-  const[formdata,setformdata,] = React.useState();
-  
+  const[formdata,setformdata,] = React.useState({});
 
-
+React.useEffect(()=>{
+console.log(formdata)
+},[formdata])
   //JSX
   return (
       <div id="capture-area" >
         <Header ModifPage={ModifPage} setModifPage={setModifPage}></Header>
         <section className="hero">
-          {ModifPage === "App" && <Hero setModifPage={setModifPage}></Hero>}
+          {ModifPage === "App" && <Hero setModifPage={setModifPage} ></Hero>}
         </section>
-        {ModifPage === "Form" && <Formulaire setModifPage={setModifPage} setformdata={setformdata}></Formulaire>}
-        {ModifPage === "Form2" && <Formulaire2 setModifPage={setModifPage} setformdata={setformdata}></Formulaire2>}
+        {ModifPage === "Form" && <Formulaire setModifPage={setModifPage} setformdata={setformdata} formdata={formdata}></Formulaire>}
+        {ModifPage === "Form2" && <Formulaire2 setModifPage={setModifPage} setformdata={setformdata} formdata={formdata}></Formulaire2>}
         {ModifPage === "FormF" && <Formulaire_fini setModifPage={setModifPage} setformdata={setformdata}></Formulaire_fini>}
         {ModifPage === "Persona" && <Persona setModifPage={setModifPage} setformdata={setformdata}></Persona>}
         {ModifPage === "Dashboard" && <Dashboard setModifPage={setModifPage} setformdata={setformdata}></Dashboard>}
