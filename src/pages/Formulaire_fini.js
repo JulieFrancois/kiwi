@@ -16,9 +16,10 @@ function Formulaire_fini({setModifPage, setformdata}) {
     return (
         <>
           {/* <Header></Header> */}
+          <div className='bonhomme6'></div>
           <section className="Formulaire_fini">
            <div className='elements'>
-          <h1 className='Titre'>Félicitations <span className='ponctuation'>!</span></h1>
+          <h1 className='paddong Titre'>Félicitations <span className='ponctuation'>!</span></h1>
           <div className='texte'>
             <p>Tu as aidé un UX designer à créer un persona.</p>
             <p>N’hésite pas à revenir</p>

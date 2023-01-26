@@ -209,7 +209,7 @@ function Persona({setModifPage, setformdata}) {
     <section className="persona">
 
 <div className="gauche">
-    <div className="personalite">
+    <div className="personalite2">
 
 <h2 className="textB">Personnalité</h2>
  <div className="container">
@@ -256,9 +256,7 @@ function Persona({setModifPage, setformdata}) {
 <div className="droite">
 
     <div className="profilB">
-        <h2 className='textB'>Profil</h2>
-
-        <p className="textB">{FirstName}</p>
+        <h2 className='textB'>Profil de <span className='name'>{FirstName}</span></h2>
         <p className="textB">{Age} ans</p>
         <p className="textB">{Gender}</p>
         <p className="textB">{City}</p>

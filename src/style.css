@@ -59,7 +59,7 @@ header {
   box-sizing: border-box;
 }
 
-footer.Persona, header.Persona{
+header.Dashboard, footer.Dashboard, footer.Persona, header.Persona{
   background-color: var(--dark_blue);
 }
 
@@ -78,12 +78,24 @@ a > .logo {
 header.Persona > .whitelogo{
   display: flex;
 }
+
+header.Dashboard > .whitelogo{
+  display: flex;
+}
  
 header.Persona > .logo{
   display: none;
 }
 
+header.Dashboard > .logo{
+  display: none;
+}
+
 footer.Persona > .whitelogo{
+  display: flex;
+}
+
+footer.Dashboard > .whitelogo{
   display: flex;
 }
 
@@ -94,8 +106,20 @@ footer.Persona > .whitelogofooter{
   align-items: center;
   list-style: none;
 }
+
+footer.Dashboard > .whitelogofooter{
+  width: var(--sp_xxl);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+}
  
 footer.Persona > .logo{
+  display: none;
+}
+
+footer.Dashboard > .logo{
   display: none;
 }
 
@@ -123,7 +147,6 @@ a > img {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  /* padding: 0 15%; */
   position: absolute;
   top: 10%;
   left: 5%;
@@ -258,6 +281,10 @@ p {
   font-size: var(--fs_h1);
 }
 
+.paddong{
+  padding: 5vh 0 ;
+}
+
 input,
 select {
   /* height: 3em; */
@@ -306,11 +333,56 @@ input.radio{
 
 /* FORMULAIRE 2 ****************************************************/
 
+.form2Fond{
+  width: 100%;
+  height: 305vh;
+  background: no-repeat url(/public/Vector8.png);
+  background-position: 100%;
+  background-size: contain;
+  position: absolute;
+  z-index: -1;
+  right: -70%;
+}
+
+.form2Fond2{
+  width: 100%;
+  height: 311vh;
+  background: no-repeat url(/public/Vector10.png);
+  background-position: 100%;
+  background-size: contain;
+  position: absolute;
+  z-index: -1;
+  right: 70%;
+}
+
+.bonhomme4{
+  width: 20%;
+  height: 235vh;
+  background: no-repeat url(/public/Group25.png);
+  background-position: 100%;
+  background-size: contain;
+  position: absolute;
+  z-index: -1;
+  right: 0%;
+}
+
+.bonhomme5{
+  width: 40%;
+  height: 100vh;
+  background: no-repeat url(/public/Group19.png);
+  background-position: 100%;
+  background-size: contain;
+  position: absolute;
+  z-index: -1;
+  right: 65%;
+  top: 150%;
+}
+
 #tickmarks {
   display: flex;
   color: var(--lilac);
   justify-content: space-between;
-  width: 70%;
+  width: 80%;
 }
 
 .personalite {
@@ -333,6 +405,8 @@ input.radio{
 .fantome{
   color: white;
 }
+
+
 /* 
 .espace{
 display: flex;
@@ -408,8 +482,20 @@ input[type=range].custom-slider.custom-slider-bullet::-webkit-slider-thumb {
   display: flex;
   flex-direction: column;
   padding: O 15%;
-  background: no-repeat url(/public/Group19.svg);
-  background-position: 10% 105%;
+  /* background: no-repeat url(/public/Group19.svg);
+  background-position: 10% 105%; */
+}
+
+.bonhomme6{
+  width: 30%;
+  height: 80vh;
+  background: no-repeat url(/public/Group282.svg);
+  background-position: 100%;
+  background-size: contain;
+  position: absolute;
+  z-index: -1;
+  right: 60%;
+  top: 20%;
 }
 
 .elements {
@@ -439,9 +525,10 @@ input[type=range].custom-slider.custom-slider-bullet::-webkit-slider-thumb {
   padding: 2% 3%;
 }
 
+
 /* Dashboard ****************************************************/
 
-.chart-box-main>div {
+/* .chart-box-main>div {
     width: 100%;
     height: 100%;
     background: #9776FF;
@@ -479,9 +566,9 @@ input[type=range].custom-slider.custom-slider-bullet::-webkit-slider-thumb {
 .title-element { color: white; font-weight: 700; }
 .Box-elements { margin: 35px 5% 0px; padding-bottom: 55px; }
 .chart-box { border-radius: 19px; margin-right: 6%; width: 118%; position: relative; }
-.box-element-flex { display: flex; margin-top: 20px; }
+.box-element-flex { display: flex; margin-top: 20px; } */
 
-.Page { 
+/* .Page { 
   position: absolute; 
   background-color: #180553; 
   height: 90vh; 
@@ -490,31 +577,28 @@ input[type=range].custom-slider.custom-slider-bullet::-webkit-slider-thumb {
   border-radius: 60px 0px 0px 60px; 
   overflow: overlay;
   box-shadow: 0px 0px 10px #9776FF;
- }
+ } */
 
-.icon-menu { width: 25px; height: 25px; fill: white; margin-right: 16px; animation-name: Icon-Menu; }
+/* .icon-menu { width: 25px; height: 25px; fill: white; margin-right: 16px; animation-name: Icon-Menu; }
 
 li.li-mneu { display: flex; padding: 14px 24px; margin-bottom: 6px; cursor: pointer; position: relative; animation-name: li-Menu; }
 div.title-menu { color: white; font-size: 14px; animation-name: Font-Menu; }
-
+ */
 
 /* Barre à droite avec formulaire, déconnecter etc...*/
-.Side-bar { background-color: #180553; width: 25%; height: 100%; position: absolute; left: 0px; top: 0px;}
+/* .Side-bar { background-color: #180553; width: 25%; height: 100%; position: absolute; left: 0px; top: 0px;} */
 
 /* Bouton se déconnecter marge */
-.logout { margin-top: 50px; }
+/* .logout { margin-top: 50px; } */
 
 /* Hover selection*/
-.Active-menu { background: linear-gradient(92deg, rgb(89, 95, 247) -229%, transparent 94%); border-left: 4px solid rgb(89, 95, 247); }
+/* .Active-menu { background: linear-gradient(92deg, rgb(89, 95, 247) -229%, transparent 94%); border-left: 4px solid rgb(89, 95, 247); } */
 
 /* Text dans la box Formulaire*/
-.text_box{
+/* .text_box{
   color: white; 
 }
 .Box-menu { margin-top: 80px;}
-
-
-
 
 @keyframes li-Menu { 
   0% { left: -165px; }
@@ -529,14 +613,129 @@ div.title-menu { color: white; font-size: 14px; animation-name: Font-Menu; }
   0% { width: 0%; }
   100% { width: 100%; }
 }
+ */
 
+ .board{
+  width: 100%;
+  display: flex;
+  background-color: var(--dark_blue);
+  position: relative;
+ }
 
+ .sidebar{
+  width: 30%;
+  height: 100vh;
+  background-color: var(--dark_blue);
+  box-shadow: 0px 5px 120px 1px rgba(226, 225, 229, 0.2);
+  border-radius: 60px;
+  position: absolute;
+  left: 0;
+  top:-10vh;
+  display: flex;
+  flex-direction: column;
+ }
 
+ .sidebar > .whitelogo {
+  display: block;
+  width: 70%;
+  padding: var(--fs_h1);
+ }
+
+ .sidebar > .whitelogobis {
+  display: block;
+  width: 10%;
+  padding: var(--fs_h1);
+  position: absolute;
+  bottom: 0;
+ }
+
+ .page{
+  width: 70%;
+  height: 80vh;
+  padding-left: 35%;
+  box-sizing: border-box;
+ }
+
+ .box{
+  background: rgba(151, 118, 255, 0.2);
+  width: 50vw;
+  height: 45vh;
+  padding: 0 var(--fs_h1) var(--fs_h1);
+  box-sizing: border-box;
+  border-radius: 11px;
+  display: flex;
+  flex-direction: column;
+ }
+
+ .mininav{
+  width: 25%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+ }
+
+ .mininav > a{
+  color: white;
+  text-decoration: none;
+ }
+
+ .gras{
+  font-weight: 700;
+ }
+
+ /* .box:first-child{
+  display: flex;
+  justify-content: space-between;
+ } */
+
+ .number{
+  color: var(--lilac);
+}
+
+.formu{
+  display: flex;
+  flex-direction: column;
+  padding: 5vh;
+}
+
+.create{
+    background-color: var(--lilac);
+    width: var(--sp_xxl);
+    font-size: var(--sp_sm);
+    padding: 2% 5%;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+    color: white;
+    font-weight: 600;
+    margin: 5vh 0;
+  
+}
+
+.sidebar li{
+  list-style: none;
+  font-size: var(--fs_h3);
+}
+
+.sidebar li:hover{
+  background-color: rgba(255, 255, 255, 0.1);
+}
 /* PERSONA ****************************************************/
 
 .textB {
   color: white;
-} 
+}
+
+.name{
+  color: var(--fluo_green);
+}
+
+.personalite2 {
+  font-size: larger;
+  font-weight: 600;
+  justify-content: space-evenly;
+  width: 100%;
+}
 
 .progressbar-wrapper {
   background-color: rgba(151, 118, 255, 0.3);

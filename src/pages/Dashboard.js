@@ -3,54 +3,40 @@ import Footer from '../components/Footer';
 
 function Dashboard ({setModifPage}) {
 return(
-    <>
-    <div class="Side-bar">
+    <div class="board">
+        <section class="sidebar">
+            <a onClick={() => setModifPage("App")} className="whitelogo" href="#" title=""><img src="/WhitePersonaFy.svg"/></a>
+            <div className='formu'>
+                <h2 className='textB'>Mes formulaires</h2>
+                <ul>
+                    <li className='textB'>Formulaire 1</li>
+                    <li className='textB'>Formulaire 2</li>
+                    <li className='textB'>Formulaire 3</li>
+                </ul>
+                <a href="#" title="" className="create">Créer un formulaire</a>
+            </div>
+            <img className="whitelogobis" src="/WhiteP.svg"/> 
+        </section> 
 
-        <div className='Box-menu'>
-                <div className='li-mneu Active-menu'>
-                    <img className='icon-menu' src="/socialmedia/Vector.png"/>
-                    <div className='title-menu'> Formulaire 1 </div>
-                </div>
-        </div>
-               
-            
-        <div className='li-mneu +formualaire'>
-            <img className='icon-menu' src="/socialmedia/Vector.png"/>
-            <div className='title-menu'>+ Nouveau formulaire</div>
-        <div>
-
-        <div className='li-mneu logout'>
-        <   img className='icon-menu' src="/socialmedia/Vector.png"/>
-            <div className="title-menu">Se déconnecter</div>
-        </div>
-        
-        </div>
-
-        
-        </div> 
-    </div> 
-
-
-        <div className="Page">
-        <div className="Box-elements">
-            <div class="box-element-flex">
-                <div className="chart-box">
-                <div className="title-element">Persona</div>
-                <div className="chart-box-main">
-                    <div className="text_box">
-                        <h1> Formulaire 1 </h1>
-                        <p>Description du formulaire en une ou 2 lignes </p>
-                        <p>Nombres de questions : 20</p>
-                        <p>Nombres de réponses : 12</p>
-                        <p>Lien : https://www.pinterest.fr/ </p>
-                        <button> Voir mon persona </button>
+        <section className="page">
+            <div className="box">
+                <div>
+                    <h1 className='textB Titre paddong'>Formulaire&nbsp;<span className='number'>#2</span></h1>
+                    <div className='mininav'>
+                        <a href="#" title="" className="">Aperçu</a>
+                        <a href="#" title="" className="gras">Modifier</a>
                     </div>
                 </div>
-                </div>
+                <div>
+                    <p className='textB'>Description du formulaire en une ou 2 lignes </p>
+                    <p className='textB'>Nombres de questions : 20</p>
+                    <p className='textB'>Nombres de réponses : 14</p>
+                    <p className='textB'>Lien : https://www.pinterest.fr/ </p>
+                    <a href="#" title="" className="boutonB">Voir le persona généré</a>
                 </div>
             </div>
-        </div>   
-    </>
+        </section>
+    </div>
     )
   }
 

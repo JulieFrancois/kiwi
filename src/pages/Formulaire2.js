@@ -13,11 +13,16 @@ function Formulaire2({setModifPage, setformdata}) {
     
   return (
     <div>
+      <div className="form2Fond"></div>
+      <div className="form2Fond2"></div>
+      <div className="bonhomme4"></div>
+      <div className="bonhomme5"></div>
+      
+      {/* BOUTON RETOUR */}
       <img onClick={() => setModifPage("Form")} className="picto" src="./material-symbols_arrow-downward-rounded.png" title=""></img>
+
       <form ref={FormRef} onSubmit={handleSubmit} className="formulaire">
-
       <h2 className='Titre'>Qu'aimes-tu ?</h2>
-
       <section className='Question'>
       <h3>Comment te définirais-tu ?</h3>
       <label className='nom_categorie'> Esprit</label>
