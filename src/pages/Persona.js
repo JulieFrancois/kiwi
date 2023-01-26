@@ -218,10 +218,12 @@ function Persona({setModifPage, setformdata}) {
 <h2 className="textB">Personnalité</h2>
  <div className="container">
     
-     <p className="textB">Esprit</p>
+    <p className="textB">Esprit</p>
+     
      <div className="progressbar-wrapper">
       <div style={{width:Spirit+"%"}} title="" class="progressbar mp4">{Spirit}</div>
      </div>
+   
 
      <p className="textB">Energie</p>
      <div className="progressbar-wrapper">
