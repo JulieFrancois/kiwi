@@ -32,6 +32,7 @@
   --tablette: 700px;
 }
 
+/* RESET */
 * {
   margin: 0;
   padding: 0;
@@ -40,11 +41,6 @@
 
 body {
   background-color: white;
-}
-
-main {
-  width: 98%;
-  margin: auto;
 }
 
 /* HEADER ***********************************************************/
@@ -67,11 +63,7 @@ a > .logo {
   width: 65%;
 }
 
-.whitelogo{
-  display: none;
-}
-
-.whitelogofooter{
+.whitelogo, .whitelogofooter{
   display: none;
 }
 
@@ -123,7 +115,6 @@ footer.Dashboard > .logo{
   display: none;
 }
 
-
 nav{
   width: 10%;
   display: flex;
@@ -137,10 +128,36 @@ a > img {
 
 /* HERO ************************************************************/
 
+/* Flèche de retour */
 .picto {
   width: 50px;
   padding: 1% 0 0 5%;
 }
+
+/* Background */
+
+.bonhomme1 {
+  width: 30%;
+  height: 90vh;
+  background: no-repeat url(/public/Group28.svg);
+  background-position: 75% 105%;
+  position: absolute;
+  right: 10%;
+  top: -10%;
+  z-index: -1; 
+}
+
+.bgHero {
+  width: 100%;
+  height: 100vh;
+  background: no-repeat url(/public/Vector10.svg);
+  background-position: 75% 105%;
+  position: absolute;
+  right: 50%;
+  z-index: -2;
+}
+
+/* Style */
 
 .hero {
   height: 80vh;
@@ -152,24 +169,6 @@ a > img {
   left: 5%;
 }
 
-.bonhomme1 {
-  width: 30%;
-  height: 90vh;
-  background: no-repeat url(/public/Group28.svg);
-  background-position: 75% 105%;
-  position: absolute;
-  right: 30%;
-}
-
-.bgHero {
-  width: 100%;
-  height: 100vh;
-  background: no-repeat url(/public/Vector10.svg);
-  background-position: 75% 105%;
-  position: absolute;
-  right: 50%;
-  z-index: -1;
-}
 
 h2 {
   font-size: var(--fs_h2);
@@ -182,8 +181,7 @@ p {
   font-size: var(--sp_sm);
 }
 
-h2,
-p {
+h2,p {
   padding-bottom: var(--sp_sm);
 }
 
@@ -208,12 +206,7 @@ p {
 
 /* FORMULAIRE ****************************************************/
 
-.formulaire {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
+/* Background */
 .formFond {
   width: 100%;
   height: 315vh;
@@ -256,6 +249,12 @@ p {
   background-size: contain;
 }
 
+/* Style */
+.formulaire {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
 .Question {
   height: 70vh;
@@ -267,13 +266,13 @@ p {
   /* border: solid black; TEST de la taille des questions*/ 
 }
 
-.Question>div {
-  display: flex;
-  align-items: center;
-}
-
 .Question:last-child {
   height: 10vh;
+}
+
+.Question > div {
+  display: flex;
+  align-items: center;
 }
 
 .Titre {
@@ -282,16 +281,13 @@ p {
 }
 
 .paddong{
-  padding: 5vh 0 ;
+  padding: 5vh 0;
 }
 
-input,
-select {
-  /* height: 3em; */
+input,select {
   border: 1px solid;
   border-color: #9776FF;
   border-radius: 5px;
-  /* background: rgba(0, 0, 0, 0.0); */
   width: 20vw;
   height: 5vh;
 }
@@ -300,10 +296,7 @@ input.radio{
   height: 2vh;
 }
 
-.age,
-.ville,
-.domaine,
-.activite {
+.age, .ville, .domaine, .activite {
   font-size: larger;
   font-weight: 600;
 }
@@ -313,16 +306,7 @@ input.radio{
   font-weight: 600;
 }
 
-.Question:nth-child(1) {
-  background: no-repeat url(/public/Group26.png);
-  /* background-position: 100%; */
-}
-
-.age,
-.genre,
-.ville,
-.domaine,
-.activite {
+.age, .genre, .ville, .domaine, .activite {
   display: flex;
   flex-direction: column;
 }
@@ -333,6 +317,7 @@ input.radio{
 
 /* FORMULAIRE 2 ****************************************************/
 
+/* Background */
 .form2Fond{
   width: 100%;
   height: 305vh;
@@ -378,6 +363,8 @@ input.radio{
   top: 150%;
 }
 
+/* Style */
+
 #tickmarks {
   display: flex;
   color: var(--lilac);
@@ -393,25 +380,13 @@ input.radio{
   width: 100%;
 }
 
-.interets,
-.outils {
+.interets, .outils {
   display: flex;
   flex-direction: column;
   font-size: larger;
   font-weight: 600;
   align-items: center;
 }
-
-.fantome{
-  color: white;
-}
-
-
-/* 
-.espace{
-display: flex;
-justify-content: space-between;
-} */
 
 .nom_categorie {
   display: flex;
@@ -427,20 +402,13 @@ input[type=range] {
 }
 
 input[type=range].custom-slider {
-  -webkit-appearance: none;
-  /*nécessaire pour Chrome */
+  /* -webkit-appearance: none; */
   padding: 0;
-  /* nécessaire pour IE */
   font: inherit;
-  /* même rendu suivant font document */
   outline: none;
-  color: #069;
-  /* sert pour couleur de référence, via currentColor, pour le curseur */
-  opacity: .8;
+  opacity: 0.8;
   background: #CCC;
-  /* sert pour couleur de fond de la zone de déplacement */
   box-sizing: border-box;
-  /* même modèle de boîte pour tous */
   transition: opacity .2s;
   cursor: pointer;
 }
@@ -455,11 +423,11 @@ input[type=range].custom-slider.custom-slider-bullet {
   background-size: 100% 25%;
 }
 
-/* input[type=range].custom-slider.custom-slider-bullet::-webkit-slider-thumb {
+input[type=range].custom-slider.custom-slider-bullet::-webkit-slider-thumb {
   width: 2em;
   background-color: #180553;
   height: 10px;
-} */
+}
 
 input[type=range].custom-slider.custom-slider-bullet::-webkit-slider-thumb {
   width: 2em;
@@ -469,22 +437,15 @@ input[type=range].custom-slider.custom-slider-bullet::-webkit-slider-thumb {
   border-radius: 50%;
   box-shadow: 0 0 .5em #FFF inset;
   background: linear-gradient(#888, #FFF) content-box,
-    /* le centre */
-    linear-gradient(-90deg, #888, #DDD) border-box;
+  /* le centre */
+  linear-gradient(-90deg, #888, #DDD) border-box;
   /* le bord */
 }
 
 
 /* FORMULAIRE_FINI ****************************************************/
 
-.Formulaire_fini {
-  height: 80vh;
-  display: flex;
-  flex-direction: column;
-  padding: O 15%;
-  /* background: no-repeat url(/public/Group19.svg);
-  background-position: 10% 105%; */
-}
+/* Background */
 
 .bonhomme6{
   width: 30%;
@@ -498,13 +459,19 @@ input[type=range].custom-slider.custom-slider-bullet::-webkit-slider-thumb {
   top: 20%;
 }
 
+/* Style */
+
+.Formulaire_fini {
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+}
+
 .elements {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-around;
   padding: 10% 15%;
-
 }
 
 .texte {
@@ -516,15 +483,9 @@ input[type=range].custom-slider.custom-slider-bullet::-webkit-slider-thumb {
   padding: 4%;
 }
 
-.ponctuation,
-.lien {
+.ponctuation, .lien {
   color: #9776FF;
 }
-
-.dashboard {
-  padding: 2% 3%;
-}
-
 
 /* Dashboard ****************************************************/
 
@@ -534,6 +495,8 @@ input[type=range].custom-slider.custom-slider-bullet::-webkit-slider-thumb {
   background-color: var(--dark_blue);
   position: relative;
  }
+
+ /* Sidebar */
 
  .sidebar{
   width: 30%;
@@ -562,8 +525,42 @@ input[type=range].custom-slider.custom-slider-bullet::-webkit-slider-thumb {
   bottom: 0;
  }
 
+ .formu{
+  display: flex;
+  flex-direction: column;
+  padding: 5vh;
+}
+
+.sidebar li{
+  list-style: none;
+  font-size: var(--fs_h3);
+}
+
+.sidebar li:hover{
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.sidebar li a{
+  text-decoration: none;
+  color: white;
+}
+
+.create{
+  background-color: var(--lilac);
+  width: var(--sp_xxl);
+  font-size: var(--sp_sm);
+  padding: 2% 5%;
+  text-decoration: none;
+  border-radius: 5px;
+  text-align: center;
+  color: white;
+  font-weight: 600;
+  margin: 5vh 0;
+}
+
+ /* Main */
+
  .page{
-  /* width: 70%; */
   height: 80vh;
   padding-left: 35%;
   box-sizing: border-box;
@@ -580,8 +577,12 @@ input[type=range].custom-slider.custom-slider-bullet::-webkit-slider-thumb {
   border-radius: 11px;
   display: flex;
   flex-direction: column;
-  margin: 10vh 0 ;
+  margin: 5vh 0 ;
  }
+
+ .number{
+  color: var(--lilac);
+}
 
  .mininav{
   width: 25%;
@@ -604,46 +605,9 @@ input[type=range].custom-slider.custom-slider-bullet::-webkit-slider-thumb {
   justify-content: space-between;
  }
 
- .number{
-  color: var(--lilac);
-}
+/* PERSONA ***************************************************************/
 
-.formu{
-  display: flex;
-  flex-direction: column;
-  padding: 5vh;
-}
-
-.create{
-    background-color: var(--lilac);
-    width: var(--sp_xxl);
-    font-size: var(--sp_sm);
-    padding: 2% 5%;
-    text-decoration: none;
-    border-radius: 5px;
-    text-align: center;
-    color: white;
-    font-weight: 600;
-    margin: 5vh 0;
-}
-
-.sidebar li{
-  list-style: none;
-  font-size: var(--fs_h3);
-}
-
-.sidebar li:hover{
-  background-color: rgba(255, 255, 255, 0.1);
-}
-
-.sidebar li a{
-  text-decoration: none;
-  color: white;
-}
-
-/* PERSONA ****************************************************/
-
-.textB {
+.textB, .fantome {
   color: white;
 }
 
@@ -662,13 +626,15 @@ input[type=range].custom-slider.custom-slider-bullet::-webkit-slider-thumb {
   background-color: rgba(151, 118, 255, 0.3);
   color: white;
   width: 100%;
+  border-radius: 25px;
 }
 
 .progressbar {
-  background-color: var(--lilac);
+  background-image: linear-gradient(to right,#c7b0fa, #8c69f6,#906dfa);
   color: white;
   text-align: right;
   font-size: 20px;
+  border-radius: 25px 0 0 25px;
 }
 
 .progressbar[title="downloading"] {
@@ -678,20 +644,8 @@ input[type=range].custom-slider.custom-slider-bullet::-webkit-slider-thumb {
 .progressbar[title="downloaded"] {
    background-color: var(--success);
 }
-  
 
-/* .slider_result {
-  height: 1em;
-  margin-left: 5%;
-  background-image: linear-gradient(to right, #906dfa, #8c69f6, #c7b0fa);
-  width: 30vh;
-} */
-
-.interetB,
-.ProfilB,
-.frustrationsB,
-.outilsB {
-
+.interetB, .ProfilB, .frustrationsB, .outilsB {
   margin: 10% 0 5% 0;
 }
 
@@ -705,10 +659,6 @@ input[type=range].custom-slider.custom-slider-bullet::-webkit-slider-thumb {
   text-align: center;
   color: var(--dark_blue);
   font-weight: 600;
-}
-
-#download-link{
-  color: var(--dark_blue);
 }
 
 .persona {
@@ -731,7 +681,6 @@ input[type=range].custom-slider.custom-slider-bullet::-webkit-slider-thumb {
   text-align: end;
 }
 
-
 /* FOOTER ***********************************************************/
 
 footer {
@@ -752,9 +701,8 @@ footer.App{
   width: 100%;
 }
 
-footer>img {
+footer > img {
   width: 4vh;
-  /* padding: 2%; */
 }
 
 .social {
@@ -765,7 +713,7 @@ footer>img {
   list-style: none;
 }
 
-/* RESPONSIVE*********************************************/
+/* RESPONSIVE***********************************************************/
 
 @media screen and (max-width: 700px) {
 
@@ -792,27 +740,17 @@ footer>img {
   }
 
   .bonhomme1 {
-    /* background-color: #9776FF; */
     width: 100%;
     height: 60vh;
     position: initial;
+    
   }
 
   .hero {
     height: 120%;
     display: flex;
-    /* justify-content: center; */
     align-items: center;
     text-align: center;
     left: 0;
-    /* padding: 0 10%; */
   }
-
-  /* body{
-    background-color: #180553;
-  } */
-
-  /* .Question {
-    height: 60vh;
-  } */
 }
